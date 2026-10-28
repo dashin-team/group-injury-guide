@@ -543,6 +543,16 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
 .pyr-lead{font-size:15.5px;font-weight:600;line-height:1.75;margin-bottom:10px}
 .pyr-svg{display:block;width:100%;max-width:440px;height:auto;margin:6px auto 4px;font-family:var(--sans)}
 @media(min-width:760px){.pyr{padding:26px 32px 22px}.pyr h3{font-size:24px}.pyr-lead{font-size:17px}}
+
+/* ===== v9 plain-language ===== */
+.risk{align-items:flex-start}
+.risk .ico{margin-top:3px;flex:none}
+.risk em.eg{display:block;font-style:normal;font-size:13.5px;font-weight:700;color:var(--teal-d);margin-top:3px;line-height:1.5}
+.risk b{font-size:16.5px}
+.risk .big{font-size:inherit}
+.res .f{line-height:1.55}
+.note.how{margin-top:12px;color:var(--ink);font-size:14px;line-height:1.75}
+.note.how b{font-weight:800;color:var(--teal-dd);margin-right:6px}
 </style>
 </head>
 <body>
@@ -596,13 +606,13 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
 <section id="duty">
  <div class="wrap">
   <h2>勞基法第59條，<br>雇主要補償的五件事</h2>
-  <p class="lead">員工遭遇職業災害而致死亡、失能、傷害或疾病時，不論過失在誰，這五筆錢都是雇主的責任風險。</p>
+  <p class="lead">員工遭遇職業災害而致死亡、失能、傷害或疾病時，不論過失在誰，這五項補償，都是雇主依法要面對的責任。</p>
   <div class="card risks">
-   <div class="risk"><svg class="ico"><use href="#i-med"/></svg><div><b>醫療補償</b><span>補償「必須之醫療費用」</span></div></div>
-   <div class="risk"><svg class="ico"><use href="#i-wage"/></svg><div><b>工資補償</b><span>公傷醫療、休養期間，補償原領工資</span></div></div>
-   <div class="risk"><svg class="ico"><use href="#i-end"/></svg><div><b>工資終結補償</b><span><i class="big">40 個月</i> 平均工資</span></div></div>
-   <div class="risk"><svg class="ico"><use href="#i-dis"/></svg><div><b>失能補償</b><span>依勞保失能給付標準，<i class="big">1.5～60 個月</i> 平均工資</span></div></div>
-   <div class="risk"><svg class="ico"><use href="#i-life"/></svg><div><b>死亡補償</b><span><i class="big">45 個月</i> 平均工資（含喪葬費）</span></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-med"/></svg><div><b>醫療補償｜員工因職災受傷或生病</b><span>老闆要補償「必需之醫療費用」。</span><em class="eg">例：依實際醫療費用計，不列入下方試算</em></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-wage"/></svg><div><b>工資補償｜醫療中不能上班</b><span>老闆要按員工「原領工資」補償。</span><em class="eg">例（月薪 45,000）：每月 45,000</em></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-end"/></svg><div><b>終結補償｜醫療滿 2 年仍未痊癒</b><span>經指定醫院診斷，審定為喪失原有工作能力，且不符失能給付標準時，老闆<i class="big">得一次給付 40 個月</i>平均工資，之後免除工資補償責任。</span><em class="eg">例：45,000 × 40 ＝ 1,800,000</em></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-dis"/></svg><div><b>失能補償｜治療終止後留有障害</b><span>經指定醫院診斷審定後，老闆按平均工資及失能程度<i class="big">一次給付</i>；標準依勞工保險條例（DM 載為 1.5～60 個月平均工資）。</span><em class="eg">例：45,000 × 1.5～60 ＝ 67,500～2,700,000</em></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-life"/></svg><div><b>死亡補償｜員工因職災過世</b><span>老闆要一次給遺屬：喪葬費 5 個月＋死亡補償 40 個月，合計 <i class="big">45 個月</i>平均工資。</span><em class="eg">例：225,000 ＋ 1,800,000 ＝ 2,025,000</em></div></div>
   </div>
   <p class="note">平均工資：依勞動基準法第二條第四款，為事由發生當日前六個月所得工資總額 ÷ 該期間之總日數所得之金額。</p>
   <div class="sharebox">
@@ -641,20 +651,21 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
   <div class="card calc" id="calc">
    <h3>補償金額，先概算一下</h3>
    <div class="inrow">
-    <div><label for="wage">月平均工資</label><div class="field"><span>NT$</span><input id="wage" type="number" inputmode="numeric" min="0" step="1000" value="30000"></div>
-     <div class="chips" id="wchips"><button class="chip on" data-w="30000" type="button">30,000</button><button class="chip" data-w="40000" type="button">40,000</button><button class="chip" data-w="50000" type="button">50,000</button><button class="chip" data-w="70000" type="button">70,000</button></div></div>
+    <div><label for="wage">月平均工資</label><div class="field"><span>NT$</span><input id="wage" type="number" inputmode="numeric" min="0" step="1000" value="45000"></div>
+     <div class="chips" id="wchips"><button class="chip" data-w="30000" type="button">30,000</button><button class="chip on" data-w="45000" type="button">45,000</button><button class="chip" data-w="50000" type="button">50,000</button><button class="chip" data-w="70000" type="button">70,000</button></div></div>
     <div><label for="paid">已有的保險／勞保給付（選填，可抵充）</label><div class="field"><span>NT$</span><input id="paid" type="number" inputmode="numeric" min="0" step="10000" placeholder="選填"></div>
      <div class="chips" id="pchips"><button class="chip" data-p="1000000" type="button">100 萬</button><button class="chip" data-p="2000000" type="button">200 萬</button><button class="chip" data-p="3000000" type="button">300 萬</button><button class="chip" data-p="0" type="button">清除</button></div></div>
    </div>
    <div class="results" id="results">
-    <div class="res hl"><div class="k">死亡補償（含喪葬費）</div><div class="v" id="r-death">—</div><div class="f">月平均工資 × 45 個月</div></div>
-    <div class="res"><div class="k">工資終結補償</div><div class="v" id="r-end">—</div><div class="f">月平均工資 × 40 個月</div></div>
-    <div class="res wide2"><div class="k">失能補償（範圍）</div><div class="v rng" id="r-dis">—</div><div class="f">月平均工資 × 1.5～60 個月，依失能等級</div></div>
-    <div class="res wide2"><div class="k">休養期間每月工資補償</div><div class="v" id="r-month">—</div><div class="f">補償原領工資（以休養月數計）</div></div>
+    <div class="res hl"><div class="k">死亡補償（含喪葬費）</div><div class="v" id="r-death">—</div><div class="f">員工過世，給遺屬<br>月平均工資 × 45 個月</div></div>
+    <div class="res"><div class="k">終結補償</div><div class="v" id="r-end">—</div><div class="f">醫療滿 2 年未痊癒、符合條件時<br>月平均工資 × 40 個月</div></div>
+    <div class="res wide2"><div class="k">失能補償（範圍）</div><div class="v rng" id="r-dis">—</div><div class="f">留有障害時一次給付｜月平均工資 × 1.5～60 個月，依失能等級</div></div>
+    <div class="res wide2"><div class="k">醫療中不能上班，每月工資補償</div><div class="v" id="r-month">—</div><div class="f">按原領工資補償（以醫療中不能工作的月數計）</div></div>
     <div class="res gap" id="gapbox" style="display:none"><div class="k">死亡補償扣除已有給付後，尚需補足</div><div class="v" id="r-gap">—</div></div>
-    <div class="res" id="gapbox2" style="display:none"><div class="k">終結工資補償扣除已有給付後，尚需補足</div><div class="v" id="r-gap2">—</div></div>
+    <div class="res" id="gapbox2" style="display:none"><div class="k">終結補償扣除已有給付後，尚需補足</div><div class="v" id="r-gap2">—</div></div>
    </div>
-   <p class="note">醫療補償依實際發生金額計，未列入試算。依勞基法第59條，勞保給付可抵充，不足仍須由雇主補足，此為概算。</p>
+   <p class="note how"><b>這個數字怎麼來的？</b>月平均工資 × 法定月數：死亡＝喪葬費 5 個月＋死亡補償 40 個月（共 45 個月）；終結＝40 個月；失能＝依失能等級（DM 載為 1.5～60 個月）。例：月薪 45,000 → 死亡 2,025,000（喪葬費 225,000＋死亡補償 1,800,000）、終結 1,800,000。</p>
+   <p class="note">此為概算，實際以法令與個案為準。醫療補償依實際發生金額計，未列入試算。依勞基法第59條但書，同一事故依勞工保險條例或其他法令規定，已由雇主支付費用補償者，雇主得予抵充；可否抵充與金額，以法令及個案為準。</p>
   </div>
   <div class="card pyr" id="pyramid">
    <h3>職災責任金字塔：老闆要面對的不只勞基法</h3>
@@ -693,7 +704,7 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
  <div class="wrap">
   <h2>不是要多花錢，<br>是讓這筆錢有個出口</h2>
   <div class="card whyc">
-   <div><svg class="ico"><use href="#i-shield"/></svg><p><b>保費，遠小於一次出事要付的錢。</b>以月平均工資 3 萬計，死亡補償概算約 135 萬（45 個月）；團險保費每年固定、可預期。</p></div>
+   <div><svg class="ico"><use href="#i-shield"/></svg><p><b>保費，遠小於一次出事要付的錢。</b>以月平均工資 4.5 萬計，死亡補償（含喪葬費）概算約 202.5 萬（45 個月）；團險保費每年固定、可預期。</p></div>
    <div><svg class="ico"><use href="#i-doc"/></svg><p><b>依法，團險給付可以抵充。</b>雇主出資投保的商業保險，員工領到的給付可抵充勞基法第59條補償，不足才需自己補。</p></div>
    <div><svg class="ico"><use href="#i-people"/></svg><p><b>員工感受得到，也願意留下。</b>知道公司多想了一層，員工更安心，也有助留才與公司形象。</p></div>
    <div><svg class="ico"><use href="#i-swap"/></svg><p><b>風險轉嫁，而不是自己扛。</b>用合理成本，把可能一次爆發的缺口交給保險公司，資金留在經營上。</p></div>
