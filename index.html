@@ -553,6 +553,81 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
 .res .f{line-height:1.55}
 .note.how{margin-top:12px;color:var(--ink);font-size:14px;line-height:1.75}
 .note.how b{font-weight:800;color:var(--teal-dd);margin-right:6px}
+
+/* ===== v10 ===== */
+.pyr-svg .pl{cursor:pointer;outline:none;-webkit-tap-highlight-color:transparent}
+.pyr-svg .pl polygon{transition:filter .15s,stroke-width .15s}
+.pyr-svg .pl:hover polygon{filter:brightness(.93)}
+.pyr-svg .pl:focus-visible polygon{stroke:#C98A2B;stroke-width:4}
+.pyr-svg .pl.on polygon{stroke:#C98A2B;stroke-width:4.5;filter:brightness(.9)}
+.pyr-tip{font-size:14px;font-weight:700;color:var(--teal-d);display:flex;align-items:center;gap:8px;margin:2px 0 4px}
+.tapdot{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(201,138,43,.6);animation:pulse 1.8s infinite;flex:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(201,138,43,0)}100%{box-shadow:0 0 0 0 rgba(201,138,43,0)}}
+@media(prefers-reduced-motion:reduce){.tapdot{animation:none}}
+.lp[hidden]{display:none}
+.lp{border:2px solid var(--bd);border-radius:16px;background:var(--foam2);padding:12px 14px;margin-top:8px}
+.lp h4{font-family:var(--serif);font-size:16px;font-weight:800;color:var(--teal-dd);line-height:1.5;margin-bottom:6px}
+.lpdl dt{font-size:13.5px;font-weight:800;color:var(--teal-d);margin-top:8px}
+.lpdl dd{font-size:15px;font-weight:600;line-height:1.7;margin:1px 0 0}
+.lpclose{margin-top:10px;border:2px solid var(--bd);background:#fff;border-radius:99px;padding:6px 18px;font:700 14px var(--sans);color:var(--teal-dd);cursor:pointer}
+.existing,.sits{margin-top:16px}
+.existing h3,.sits h3{font-size:19px;font-weight:800;color:var(--teal-dd);margin-bottom:8px;line-height:1.45}
+.dots2{list-style:none;display:grid;gap:10px}
+.dots2 li{font-size:15px;font-weight:600;line-height:1.75;padding-left:14px;border-left:4px solid var(--teal)}
+.dots2 li b{font-weight:800;color:var(--teal-dd)}
+.closing{margin-top:12px;font-size:16px;font-weight:800;color:var(--teal-dd);background:var(--foam);border:2px solid var(--bd);border-radius:14px;padding:10px 14px}
+.sit{margin-top:8px}
+.sit .in p{font-size:15px;font-weight:600;line-height:1.75;margin:6px 0}
+#compare .lead.choose{font-size:15.5px}
+.cmpbox{margin-top:6px}
+table.cmp{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;font-weight:700;background:#fff}
+table.cmp th,table.cmp td{padding:10px 12px;vertical-align:top;text-align:left;border-bottom:2px solid var(--bd);border-right:2px solid var(--bd);line-height:1.6}
+table.cmp thead th{background:var(--foam);color:var(--teal-dd);font-weight:800;border-bottom:3px solid var(--bd)}
+table.cmp th.rh{background:var(--cream2);color:var(--teal-dd);font-weight:800;min-width:7em;position:sticky;left:0}
+table.cmp thead th.rh{background:var(--foam)}
+table.cmp tr>*:last-child{border-right:0}table.cmp tbody tr:last-child>*{border-bottom:0}
+.addon .card.mini,.card.mini{padding:12px 14px;margin-top:10px;box-shadow:none}
+.card.mini p{font-size:14.5px;font-weight:600;line-height:1.7;margin:6px 0}
+.indl{display:block;font-size:14px;font-weight:700;color:var(--ink2);margin:10px 0 4px}
+.indin{width:100%;font:700 16px var(--sans);padding:10px 12px;border:2px solid var(--bd);border-radius:14px;background:#fff;color:var(--ink)}
+.indhits{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.indhit{text-align:left;font:700 14.5px var(--sans);border:2px solid var(--bd);background:#fff;border-radius:12px;padding:9px 12px;color:var(--teal-dd);cursor:pointer;line-height:1.5}
+.indhit:active,.indhit:hover{background:var(--foam)}
+.indres{margin-top:10px}
+.indcard{border:2px solid var(--bd);border-radius:16px;background:var(--foam2);padding:12px 14px}
+.indcard b{display:block;font-family:var(--serif);font-size:17px;font-weight:800;color:var(--teal-dd)}
+.indcard>span{display:block;font-size:14.5px;font-weight:600;margin:2px 0 8px;line-height:1.5}
+.indrates{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.indrates>div{background:#fff;border:2px solid var(--bd);border-radius:12px;padding:8px 10px}
+.indrates small{display:block;font-size:12.5px;font-weight:700;color:var(--ink2);line-height:1.4}
+.indrates strong{font-family:var(--serif);font-size:24px;font-weight:800;color:var(--teal-dd)}
+.indwarn{margin-top:8px;font-size:14px;font-weight:700;color:#8a3b2e;background:#fbeae5;border:2px solid #b4584d;border-radius:12px;padding:8px 12px;line-height:1.6}
+.indrow{display:grid;gap:8px}
+.indrow label{font-size:13.5px;font-weight:700;color:var(--ink2)}
+.indrow input{display:block;width:100%;margin-top:3px;font:700 17px var(--sans);padding:8px 12px;border:2px solid var(--bd);border-radius:12px;background:#fff;color:var(--ink)}
+.indout{margin-top:10px;border:2px solid var(--bd);border-radius:14px;background:#fff;padding:6px 14px}
+.indline{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:2px solid var(--line);font-size:14.5px;font-weight:700}
+.indline:last-of-type{border-bottom:0}
+.indline b{font-family:var(--serif);font-weight:800;color:var(--teal-dd);white-space:nowrap}
+.indline span{line-height:1.5}
+.indline.sub2 span{padding-left:12px;font-size:13.5px;color:var(--ink2)}
+.exprem{margin-top:8px}
+.indline.tot{font-size:15.5px;color:var(--teal-dd)}
+.indline.tot b{font-size:19px;color:var(--bd2)}
+@media(min-width:760px){.indrow{grid-template-columns:repeat(3,1fr)}}
+.exh{font-size:14.5px;font-weight:600;line-height:1.75}
+.tagx{display:inline-block;margin-right:8px;font-size:12.5px;font-weight:800;color:#fff;background:var(--bd2);border-radius:99px;padding:1px 10px}
+.splitbar{display:flex;height:34px;border:2px solid var(--bd);border-radius:10px;overflow:hidden;margin:8px 0 6px}
+.splitbar .sb{display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:800;color:var(--teal-dd);min-width:0}
+.splitbar .sb.b{background:#D8ECFA}.splitbar .sb.o{background:#FAE9D1;border-left:2px solid var(--bd);min-width:10px}
+.legend2{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:13.5px;font-weight:700;margin-bottom:6px}
+.legend2 i{display:inline-block;width:14px;height:14px;border:2px solid var(--bd);margin-right:6px;vertical-align:-2px;border-radius:3px}
+.exsteps{list-style:none;display:grid;gap:8px;margin:8px 0}
+.exsteps li{border:2px solid var(--bd);border-radius:14px;background:#fff;padding:10px 12px;font-size:14.5px;font-weight:600;line-height:1.7}
+.exsteps li>b:first-child{display:block;font-weight:800;color:var(--teal-dd);margin-bottom:2px}
+.num2{font-family:var(--serif);font-weight:800;color:var(--bd2)}
+.card.mini .scroll .tbl,.card.mini .scroll.s2 .tbl{min-width:0}
+.card.mini .tbl th,.card.mini .tbl td{padding:7px 8px;font-size:14px}
 </style>
 </head>
 <body>
@@ -670,8 +745,31 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
   <div class="card pyr" id="pyramid">
    <h3>職災責任金字塔：老闆要面對的不只勞基法</h3>
    <p class="pyr-lead">勞基法是基本補償；員工若再依民法求償，金額可能更高，所以建議事先規劃保障。</p>
-   <svg class="pyr-svg" viewBox="0 0 360 320" role="img" aria-label="職災責任金字塔，由下往上：勞基法59條職災補償、民法184條侵權責任、雇主連帶責任、如何保"><polygon points="180.0,10 180.0,10 220.8,82 139.2,82" fill="#1C5F57" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="77" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">如何保</text><polygon points="136.9,86 223.1,86 263.9,158 96.1,158" fill="#2B8A7E" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="135" text-anchor="middle" font-size="18.5" font-weight="800" fill="#FFFFFF">雇主連帶責任</text><polygon points="93.9,162 266.1,162 306.9,234 53.1,234" fill="#7CC2B5" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="211" text-anchor="middle" font-size="18.5" font-weight="800" fill="#14281F">民法184條侵權責任</text><polygon points="50.8,238 309.2,238 350.0,310 10.0,310" fill="#D5EBE5" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="287" text-anchor="middle" font-size="18.5" font-weight="800" fill="#14281F">勞基法59條職災補償</text></svg>
-   <p class="note">由下往上閱讀：先是勞基法的補償責任，再往上是民法層面的責任，最上層是如何做好保障規劃。</p>
+   <p class="pyr-tip"><span class="tapdot"></span>點一下每一層，看白話說明</p>
+   <svg class="pyr-svg" viewBox="0 0 360 300" role="group" aria-label="職災責任金字塔，由下往上共三層，可點擊展開說明"><g class="pl" data-k="3" role="button" tabindex="0" aria-expanded="false" aria-controls="lp3"><polygon points="180.0,10 180.0,10 232.3,98 127.7,98" fill="#1C5F57" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="78" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">如何保</text></g><g class="pl" data-k="2" role="button" tabindex="0" aria-expanded="false" aria-controls="lp2"><polygon points="125.3,102 234.7,102 292.9,200 67.1,200" fill="#2B8A7E" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="157" text-anchor="middle" font-size="18.5" font-weight="800" fill="#FFFFFF">民法侵權責任</text></g><g class="pl" data-k="1" role="button" tabindex="0" aria-expanded="false" aria-controls="lp1"><polygon points="64.7,204 295.3,204 350.0,296 10.0,296" fill="#D5EBE5" stroke="#245249" stroke-width="2.5" stroke-linejoin="round"/><text x="180" y="244" text-anchor="middle" font-size="18.5" font-weight="800" fill="#14281F">職災保險給付</text><text x="180" y="268" text-anchor="middle" font-size="18.5" font-weight="800" fill="#14281F">勞基法59條補償責任</text></g></svg>
+   <div class="lp" id="lp3" data-k="3" hidden><h4>③ 如何保（規劃保障）</h4><dl class="lpdl"><dt>這層是什麼</dt><dd>事先用保險等方式規劃保障，讓上面兩層可能出現的補償與賠償，有一筆準備好的資金。</dd><dt>誰付</dt><dd>老闆（公司）負擔保費；給付內容依保單約定。</dd><dt>依據</dt><dd>保單條款與 DM。勞基法第59條但書允許「已由雇主支付費用補償者」抵充，可否抵充依法令及個案。</dd><dt>有沒有過失門檻</dt><dd>依保單約定。例如好頭家 PLUS 二代的雇主補償契約責任險，執行職務期間無須論責（依 DM）。</dd><dt>例子</dt><dd>頭家安康2.0 的 GOH，給付約定保險金與已獲勞保職災給付之差額；好頭家 PLUS 二代在民事責任超過雇補險保額時，另有超額雇主意外責任險。</dd></dl><button class="lpclose" type="button">收合</button></div>
+   <div class="lp" id="lp2" data-k="2" hidden><h4>② 民法侵權責任（有過失才有）</h4><dl class="lpdl"><dt>這層是什麼</dt><dd>除了勞基法的補償，員工或家屬還可能另依民法向雇主求償（例如第184條侵權行為、第188條僱用人責任），談的是損害賠償。</dd><dt>誰付</dt><dd>依個案認定，可能由雇主負責；責任與金額由調解、和解或法院判斷。</dd><dt>依據</dt><dd>民法。本頁只說明概念，不逐條解釋。</dd><dt>有沒有過失門檻</dt><dd>有。通常要有故意或過失才可能成立，是否成立依個案。</dd><dt>例子</dt><dd>本頁案例區的屋頂墜落案，一審判賠逾 400 萬元（中央社報導，仍可上訴），金額可能高於勞基法補償。</dd></dl><button class="lpclose" type="button">收合</button></div>
+   <div class="lp" id="lp1" data-k="1" hidden><h4>① 職災保險給付／勞基法第59條補償責任（無過失，依法補償）</h4><dl class="lpdl"><dt>這層是什麼</dt><dd>員工因職業災害受傷、生病、失能或死亡時，雇主依勞基法第59條要負的補償責任，包含醫療、原領工資、失能、死亡與喪葬費等。</dd><dt>誰付</dt><dd>職災保險（勞保局）依投保薪資先給付，雇主補其餘部分；細項見上方「勞保與雇主責任分攤表」（內容引自 DM）。</dd><dt>依據</dt><dd>勞動基準法第59條；職災保險給付依勞工職業災害保險及保護法。</dd><dt>有沒有過失門檻</dt><dd>沒有。不論過失在誰，雇主都要依法補償。</dd><dt>例子</dt><dd>月平均工資 45,000 的員工因職災過世，死亡補償（含喪葬費）45 個月 ＝ 2,025,000 元。</dd></dl><button class="lpclose" type="button">收合</button></div>
+   <p class="note">由下往上閱讀：先是勞基法的補償責任，再往上是民法層面的責任，最上層是如何做好保障規劃。以上為概念說明，實際以法令及個案為準。</p>
+  </div>
+
+  <div class="card existing" id="accident">
+   <h3>已經有意外險，為什麼還要看職災？</h3>
+   <ul class="dots2">
+    <li><b>意外險是照顧員工個人：</b>員工發生意外時，依保單約定給付給員工或家屬。</li>
+    <li><b>職災是老闆依法要負的責任：</b>員工因職災受傷或死亡，老闆依勞基法第59條要補償，與有沒有過失無關。</li>
+    <li><b>兩者不一定互相取代：</b>意外險的給付能不能抵充雇主的補償責任，要看保單約定與雇主出資情形。DM 引述的行政函釋說明，由雇主負擔保險費為勞工投保的商業保險，勞工領的保險給付，雇主得用以抵充，不足的部分雇主仍應補足；實際以法令及個案為準。</li>
+   </ul>
+   <p class="closing">意外險是照顧員工，職災是保護老闆自己。</p>
+  </div>
+
+  <div class="card sits" id="situations">
+   <h3>常被誤會的情境，算不算職災？</h3>
+   <p class="pyr-lead">是否算職災，要看個案認定。以下是法規的大方向，不是保證。</p>
+   <details class="sit"><summary>通勤：上下班路上發生事故</summary><div class="in"><p>依勞工職業災害保險職業傷病審查準則第4條：上下班時，於適當時間，從日常居、住處所往返勞動場所，或因從事二份以上工作而往返於勞動場所間的應經途中發生事故致傷害，視為職業傷害。在學學生或建教合作班學生，上下班直接往返學校與勞動場所的應經途中也一樣。</p><p>另外，依同準則第17條，若屬「非日常生活所必需之私人行為」、「未領有駕駛車種之駕駛執照駕車」等情形，不得視為職業傷害。</p><p class="note">是否算職災，要看個案認定。</p></div></details>
+   <details class="sit"><summary>出差、外出辦事</summary><div class="in"><p>依審查準則第9條：因公出差或其他職務上原因在工作場所外作業，從日常居、住處所或工作場所出發，到公畢返回期間的職務活動與合理途徑發生事故致傷害，視為職業傷害。非工作時間被雇主臨時指派出勤，直接前往勞動場所的合理途徑上發生事故，也視為職業傷害。</p><p class="note">是否算職災，要看個案認定。</p></div></details>
+   <details class="sit"><summary>公司活動：旅遊、尾牙、康樂活動</summary><div class="in"><p>依審查準則第14條：參加雇主舉辦的康樂活動或其他活動，因雇主管理，或提供的設施、設備有缺陷而發生事故致傷害，視為職業傷害。</p><p class="note">是否算職災，要看個案認定；活動性質、管理與設施情形都可能影響判斷。</p></div></details>
+   <details class="sit"><summary>外籍員工</summary><div class="in"><p>依勞工職業災害保險及保護法第11條，職災保險的投保對象包括外國籍人員（依法規經核准從事工作者）。外籍員工也是公司要用心保障的對象；是否算職災，一樣依個案認定。</p><p>商業團險投保外籍人士時，DM 提醒要填寫國籍、性別、居留證號。</p><p class="note">實際加保與承保條件，以法令、保單條款與核保為準。</p></div></details>
   </div>
 
  </div>
@@ -712,6 +810,27 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
  </div>
 </section>
 
+<section id="compare" style="padding-top:8px">
+ <div class="wrap">
+  <h2>兩個專案，怎麼選？</h2>
+  <p class="lead choose"><b>不是二選一：員工個人保障＋雇主責任保障。</b>下表依 DM 內容並排整理，沒有列出的項目就不猜。</p>
+  <div class="scroll cmpbox"><table class="cmp">
+   <thead><tr><th class="rh"></th><th>頭家安康 2.0</th><th>好頭家 PLUS 二代</th></tr></thead>
+   <tbody>
+    <tr><th class="rh">承保公司</th><td>富邦人壽（人壽團險）</td><td>富邦產險（產險團體專案）</td></tr>
+    <tr><th class="rh">主要保障對象</th><td>員工個人保障為主，另有企業保障（GOH 等）</td><td>雇主的補償責任為主，並含員工傷害保障</td></tr>
+    <tr><th class="rh">保障重點</th><td>GMA2 團體意外傷害＋意外醫療；GOH 給付約定保險金與勞保職災給付之差額</td><td>雇主補償契約責任險（執行職務期間，無須論責）、團體傷害險（非執行職務期間）</td></tr>
+    <tr><th class="rh">最低投保人數</th><td>至少 5 人</td><td>5 人以上，記名投保</td></tr>
+    <tr><th class="rh">付費與年齡</th><td>公司 100% 付費；承保年齡 15～70 歲</td><td>員工首年投保年齡須至未滿 70 足歲，續保至未滿 75 足歲</td></tr>
+    <tr><th class="rh">雇主民事超額責任</th><td>DM 未列超額雇主責任險</td><td>有超額雇主意外責任險（一般行業須投保方案二以上；工廠工程業、醫療金融補教顧問服務業版全計畫皆含）</td></tr>
+    <tr><th class="rh">員工可否擇計劃</th><td>可，員工擇一計劃 A～F（企業保障全體員工須相同）</td><td>依行業版本由公司選方案，DM 未列員工自選</td></tr>
+   </tbody>
+  </table></div>
+  <p class="sharehint">← 表格可左右滑動 →</p>
+  <p class="note">以上為 DM 內容整理，實際以保單條款與核保為準。</p>
+ </div>
+</section>
+
 <section id="prodA" style="padding-top:8px">
  <div class="wrap">
   <div class="prod prodA">
@@ -728,6 +847,70 @@ table.share th.rh{border-right:3px solid var(--bd);color:#17487f}
     <div class="tabs" id="lifeTabs"></div>
     <div id="lifeCard"></div>
     <p class="note">職業等級 1 至 4 級之 66 歲（含）以上員工不得投保計劃 D。計劃 E、F 之員工無加選加強保障，且僅可加選企業保障方案 1（GOH）。</p>
+   </div></details>
+   <details class="addon"><summary>加選項目白話說明（GTL／GHR／GSHS／企業保障）</summary><div class="in">
+    <h4 class="sub" style="margin-top:0">加強保障：員工可依職務或需求加選</h4>
+    <div class="card mini"><b>GTL 團體一年定期壽險（30 萬）</b>
+     <p>身故或喪葬費用保險金 30 萬、完全失能保險金 30 萬。年繳保費依年齡與性別而不同：</p>
+     <div class="scroll s2"><table class="tbl"><tr><th>年齡</th><th>男（元）</th><th>女（元）</th></tr><tr><td>15～19歲</td><td class="v">87</td><td class="v">48</td></tr><tr><td>20～24歲</td><td class="v">165</td><td class="v">81</td></tr><tr><td>25～29歲</td><td class="v">174</td><td class="v">93</td></tr><tr><td>30～34歲</td><td class="v">195</td><td class="v">105</td></tr><tr><td>35～39歲</td><td class="v">285</td><td class="v">147</td></tr><tr><td>40～44歲</td><td class="v">486</td><td class="v">219</td></tr><tr><td>45～49歲</td><td class="v">801</td><td class="v">348</td></tr><tr><td>50～54歲</td><td class="v">1,209</td><td class="v">525</td></tr><tr><td>55～59歲</td><td class="v">1,755</td><td class="v">735</td></tr><tr><td>60～64歲</td><td class="v">2,541</td><td class="v">1,068</td></tr><tr><td>65～69歲</td><td class="v">3,786</td><td class="v">1,635</td></tr><tr><td>70歲</td><td class="v">6,090</td><td class="v">2,934</td></tr></table></div></div>
+    <div class="card mini"><b>GHR 住院醫療日額附約（甲型-AEE）</b>
+     <p>住院醫療日額：一般住院 1,000 元／日（每次事故最高 365 天）、加護病房 2,000 元／日（每次最高 30 天）、燒燙傷中心 3,000 元／日（每次最高 30 天）。</p>
+     <p>年繳保費：職業等級 1～3 級 1,300 元，4 級 1,700 元。等待期 30 天。</p></div>
+    <div class="card mini"><b>GSHS 一年定期住院醫療（SAA）</b>
+     <p>實支實付型：每日病房費用 1,000 元／日（每次事故最高 31 天）、醫院雜費實支實付 22,000 元／次、手術費用 28,800 元／次。年繳保費依年齡與職業等級：</p>
+     <div class="scroll s2"><table class="tbl"><tr><th>年齡</th><th>職業等級 1～3 級（元）</th><th>4 級（元）</th></tr><tr><td>15～29歲</td><td class="v">1,889</td><td class="v">2,361</td></tr><tr><td>30～39歲</td><td class="v">2,103</td><td class="v">2,629</td></tr><tr><td>40～49歲</td><td class="v">2,939</td><td class="v">3,674</td></tr><tr><td>50～59歲</td><td class="v">3,478</td><td class="v">4,348</td></tr><tr><td>60～64歲</td><td class="v">3,764</td><td class="v">4,705</td></tr><tr><td>65～69歲</td><td class="v">4,542</td><td class="v">5,678</td></tr><tr><td>70歲</td><td class="v">6,036</td><td class="v">7,545</td></tr></table></div></div>
+    <h4 class="sub">企業保障：三擇一，全體員工須投保同一個</h4>
+    <ul class="dots">
+     <li><b>GOH 團體職業災害傷害保險：</b>給付約定保險金與已獲勞工職業災害保險給付之差額，依職災編號計費（見下方費率與算例）。</li>
+     <li><b>GOPA 職業傷害保險給付附加條款（100 萬）：</b>職業傷害身故或喪葬費用保險金 100 萬，失能保險金 5～100 萬；年繳 1～3 級 350 元、4 級 790 元。</li>
+     <li><b>GADI 團體喪失工作能力傷害保險：</b>傷害喪失工作能力保險金每月 2 萬元（最高給付 20 年）；年繳 1～3 級 2,400 元、4 級 5,400 元。</li>
+    </ul>
+    <h4 class="sub">投保提醒</h4>
+    <ul class="dots">
+     <li>計劃 E、F 只給職業等級 5、6 級的員工，且只能加選企業保障方案 1（GOH），不能加選加強保障。</li>
+     <li>計劃 D：職業等級 1～4 級、66 歲（含）以上的員工不得投保。</li>
+     <li>至少 5 人投保、公司 100% 付費、承保年齡 15～70 歲。</li>
+    </ul>
+    <p class="note">以上為 DM 內容整理，保障範圍與限制以保單條款為準。</p>
+   </div></details>
+   <details class="ind"><summary>依行業查職災費率・保費概算（GOH）</summary><div class="in">
+    <label for="indQ" class="indl">輸入行業關鍵字或職災編號</label>
+    <input id="indQ" class="indin" type="search" placeholder="例：金融、營造、25" autocomplete="off">
+    <div id="indHits" class="indhits"></div>
+    <label for="indNo" class="indl">或直接選職災編號</label>
+    <select id="indNo" class="indin"><option value="">請選擇編號 1～55</option></select>
+    <div id="indRes" class="indres" hidden></div>
+    <div class="indcalc" id="indCalc" hidden>
+     <h4 class="sub" style="margin-top:14px">保費概算（GOH 部分）</h4>
+     <div class="indrow"><label>投保人數<input id="indN" type="number" min="5" step="1" value="5" inputmode="numeric"></label>
+      <label>職保月投保薪資（元）<input id="indIns" type="number" min="0" step="100" value="72800" inputmode="numeric"></label>
+      <label>實際月薪（元）<input id="indAct" type="number" min="0" step="100" value="76000" inputmode="numeric"></label></div>
+     <div id="indOut" class="indout"></div>
+     <p class="note">公式：職保內＝投保薪資 ÷ 1,000 × 職保內費率；職保外＝（實際月薪 − 投保薪資）÷ 1,000 × 職保外費率；每人合計四捨五入至元（依 DM 算例）。僅為 GOH 的概算，不含計劃 A～F 與加強保障保費。概算，實際以保單與核保為準。</p>
+    </div>
+    <p class="note">行業名稱僅為例示，引自好頭家專案適用與除外行業的列示，並非完整行業表；沒有名稱的編號，請改用編號查詢，並以勞保投保資料與核保為準。</p>
+   </div></details>
+   <details class="exm"><summary>完整算例：職災發生時，錢怎麼分、保費怎麼算（DM 示例）</summary><div class="in">
+    <p class="exh"><span class="tagx">示意、概算</span>設定（DM 示例）：幸福公司職災編號 52；乙員工 50 歲女性、職業等級 1 級，實際月薪 76,000 元，職保投保薪資 72,800 元；投保計劃 A＋GHR＋GOH（代碼 A21）。</p>
+    <h4 class="sub" style="margin-top:12px">一、如果職災造成死亡，錢怎麼分？（依 DM 分攤表月數概算）</h4>
+    <div class="splitbar" aria-label="示意：死亡補償 45 個月的分攤"><span class="sb b" style="flex:95.79">勞保局給付</span><span class="sb o" style="flex:4.21"></span></div>
+    <div class="legend2"><span><i class="lg-b"></i>職災保險（勞保局）給付</span><span><i class="lg-o"></i>雇主責任</span></div>
+    <ol class="exsteps">
+     <li><b>① 職災保險給付，先給多少？</b>依 DM 分攤表，死亡給付「職保投保薪資部分」45 個月由勞保局給付：72,800 × 45 ＝ <b class="num2">3,276,000 元</b>（概算，實際以勞保局核定為準）。</li>
+     <li><b>② 保險約定補差額，補多少？</b>GOH 給付「約定保險金與已獲勞保職災給付之差額」。約定保險金額依保單約定，DM 未載明金額，本頁不假設數字。示意：約定保險金 − 勞保已給付 ＝ 保險補的差額。</li>
+     <li><b>③ 老闆自己還要補多少？</b>依 DM 分攤表，「超出職保投保薪資部分」的 45 個月為雇主責任：(76,000 − 72,800) × 45 ＝ 3,200 × 45 ＝ <b class="num2">144,000 元</b>（概算）。這一段若投保 GOH，是否由保險承擔、如何承擔，依保單條款與核保為準。</li>
+    </ol>
+    <p class="note">對照：勞基法死亡補償（含喪葬費）45 個月 ＝ 76,000 × 45 ＝ 3,420,000 元 ＝ 3,276,000（勞保局）＋ 144,000（雇主責任）。</p>
+    <h4 class="sub">二、保費怎麼算？（DM 原算例）</h4>
+    <div class="indout exprem">
+     <div class="indline"><span>計劃 A（職業等級 1 級）</span><b>1,524 元</b></div>
+     <div class="indline"><span>加強保障 GHR（職業等級 1～3 級）</span><b>1,300 元</b></div>
+     <div class="indline sub2"><span>GOH 職保內：72,800 ÷ 1,000 × 3.8</span><b>276.64 元</b></div>
+     <div class="indline sub2"><span>GOH 職保外：(76,000 − 72,800) ÷ 1,000 × 16.9</span><b>54.08 元</b></div>
+     <div class="indline"><span>GOH 合計：276.64 ＋ 54.08 ＝ 330.72，四捨五入</span><b>331 元</b></div>
+     <div class="indline tot"><span>乙員工年繳總保費：1,524 ＋ 1,300 ＋ 331</span><b>3,155 元</b></div>
+    </div>
+    <p class="note">示意、概算。職災編號 52 的費率為職保內 3.8、職保外 16.9（見下方費率表）。實際以保單與核保為準。</p>
    </div></details>
    <details><summary>展開 GOH 職災費率（依職災編號）</summary><div class="in">
     <p class="small" style="margin-bottom:8px">年繳費率（每千元）：職保內費率／超過職保投保薪資之職保外費率。</p>
@@ -866,6 +1049,61 @@ function renderHaoPlan(i){
 }
 renderHaoVer('general');
 
+
+/* ---------- v10: 金字塔 ---------- */
+(function(){
+  var layers=document.querySelectorAll('#pyramid .pl'), panels=document.querySelectorAll('#pyramid .lp');
+  function setOpen(k){
+    var cur=null; panels.forEach(function(p){ if(!p.hidden) cur=p.getAttribute('data-k') });
+    var next=(cur===k)?null:k;
+    panels.forEach(function(p){ p.hidden=(p.getAttribute('data-k')!==next) });
+    layers.forEach(function(l){ var on=(l.getAttribute('data-k')===next); l.classList.toggle('on',on); l.setAttribute('aria-expanded',on?'true':'false') });
+    if(next){var el=document.getElementById('lp'+next); if(el&&el.scrollIntoView){var r=el.getBoundingClientRect(); if(r.top<0||r.bottom>window.innerHeight){el.scrollIntoView({behavior:'smooth',block:'nearest'})}}}
+  }
+  layers.forEach(function(l){
+    l.addEventListener('click',function(){setOpen(l.getAttribute('data-k'))});
+    l.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(l.getAttribute('data-k'))} });
+  });
+  document.querySelectorAll('#pyramid .lpclose').forEach(function(b){ b.addEventListener('click',function(){ setOpen(b.parentNode.getAttribute('data-k')) }) });
+})();
+
+/* ---------- v10: 行業查詢 / GOH 概算 ---------- */
+var GOHR=[[1, 5.6, 24.7], [2, 4.7, 21.4], [3, 23.2, 104.3], [4, 5.0, 22.5], [5, 4.7, 21.4], [6, 4.0, 18.1], [7, 3.4, 15.7], [8, 4.4, 20.2], [9, 10.6, 47.2], [10, 9.3, 41.6], [11, 4.7, 21.4], [12, 5.0, 22.5], [13, 5.9, 26.9], [14, 9.7, 43.8], [15, 10.2, 46.0], [16, 8.2, 37.0], [17, 6.3, 28.2], [18, 2.7, 12.4], [19, 6.3, 28.2], [20, 5.9, 26.9], [21, 4.4, 20.2], [22, 6.3, 28.2], [23, 9.0, 40.5], [24, 5.6, 24.7], [25, 14.4, 65.1], [26, 8.8, 39.3], [27, 10.2, 46.0], [28, 11.9, 53.9], [29, 11.3, 50.6], [30, 4.3, 19.1], [31, 4.0, 18.1], [32, 9.7, 43.8], [33, 21.3, 95.5], [34, 4.7, 21.4], [35, 4.0, 18.1], [36, 5.2, 23.5], [37, 4.7, 21.4], [38, 4.4, 20.2], [39, 4.3, 19.1], [40, 3.1, 13.4], [41, 3.1, 13.4], [42, 2.7, 12.4], [43, 2.7, 12.4], [44, 3.8, 16.9], [45, 3.4, 15.7], [46, 3.1, 13.4], [47, 3.2, 14.5], [48, 5.6, 24.7], [49, 4.3, 19.1], [50, 2.7, 12.4], [51, 2.7, 12.4], [52, 3.8, 16.9], [53, 3.2, 14.5], [54, 5.6, 24.7], [55, 4.4, 20.2]];
+var INDN={"26": "土木工程業", "27": "庭園景觀工程業", "10": "紙漿與紙及紙製品製造業", "16": "金屬製品製造業（含鐵工廠機械廠工人）", "14": "非金屬礦物製品製造業", "9": "木竹製品及家具製造業", "29": "機電管道及其他建築設備安裝業", "28": "專門營造業", "25": "建築工程業（含鷹架工、沖床工及各式工地工人）", "15": "基本金屬製造業", "3": "石油及天然氣礦業、砂、石及黏土採取業、其他礦業及土石採取業（含砂石車司機與工人）", "33": "水上運輸業", "32": "陸運業（含營業用貨車司機）", "17": "金屬手工具製造業及機械設備製造業等各類鋼鐵及機械器具類工廠製造業（含電焊工人）", "20": "汽車及其零件及各類運輸工具製造業", "35": "報關及船務代理業", "39": "旅館住宿服務業（不含餐飲業）", "40": "影片、文字、錄音等出版服務業", "41": "電信業", "42": "電腦系統設計及資訊服務業", "43": "金融證券保險業", "44": "不動產開發仲介服務業", "45": "法律、會計、顧問等各類專門服務業", "46": "研究發展服務業", "47": "旅行及相關代訂服務業", "50": "教育服務業", "51": "醫療保健服務業", "53": "宗教或職業工會組織之文書內勤人員"};
+(function(){
+  var rate={}; GOHR.forEach(function(r){rate[r[0]]=r});
+  var sel=$('#indNo'), q=$('#indQ'), hits=$('#indHits'), res=$('#indRes'), calcBox=$('#indCalc'), cur=null;
+  GOHR.forEach(function(r){ var o=document.createElement('option'); o.value=r[0]; o.textContent='編號 '+r[0]+(INDN[r[0]]?'｜'+INDN[r[0]]:''); sel.appendChild(o) });
+  function fmt1(x){return (Math.round(x*100)/100).toFixed(2)}
+  function show(no){
+    cur=no; var r=rate[no]; if(!r){res.hidden=true;calcBox.hidden=true;return}
+    sel.value=String(no);
+    var warn=(r[1]>=20)?'<p class="indwarn">提醒：這個編號的費率在表內明顯偏高（職保內 '+r[1].toFixed(1)+'；表內其他編號職保內費率多在 2.7～14.4），請依實際行業判斷。</p>':'';
+    res.innerHTML='<div class="indcard"><b>職災編號 '+no+'</b>'+(INDN[no]?'<span>'+esc(INDN[no])+'</span>':'<span>（DM 未列此編號的行業名稱）</span>')+'<div class="indrates"><div><small>職保內費率（每千元）</small><strong>'+r[1].toFixed(1)+'</strong></div><div><small>職保外費率（每千元）</small><strong>'+r[2].toFixed(1)+'</strong></div></div></div>'+warn;
+    res.hidden=false; calcBox.hidden=false; est();
+  }
+  function est(){
+    if(!cur) return; var r=rate[cur];
+    var n=parseFloat($('#indN').value)||0, ins=parseFloat($('#indIns').value)||0, act=parseFloat($('#indAct').value); if(!(act>0)) act=ins;
+    var inn=ins/1000*r[1], out=Math.max(0,act-ins)/1000*r[2], per=Math.round(inn+out), tot=per*n, msg='';
+    if(act<ins) msg='<p class="indwarn">實際月薪低於投保薪資，職保外以 0 計。</p>';
+    if(n>0&&n<5) msg+='<p class="indwarn">本專案投保人數至少 5 人。</p>';
+    $('#indOut').innerHTML='<div class="indline"><span>職保內</span><b>'+fmt1(inn)+' 元</b></div><div class="indline"><span>職保外</span><b>'+fmt1(out)+' 元</b></div><div class="indline"><span>每人 GOH 年繳（四捨五入）</span><b>'+per.toLocaleString('en-US')+' 元</b></div><div class="indline tot"><span>× '+n+' 人，年繳概算</span><b>'+tot.toLocaleString('en-US')+' 元</b></div>'+msg;
+  }
+  function search(){
+    var v=q.value.trim(); hits.innerHTML=''; if(!v) return;
+    var out=[];
+    if(/^\d+$/.test(v)){ var n=parseInt(v,10); if(rate[n]) out.push(n) }
+    else { Object.keys(INDN).forEach(function(k){ if(INDN[k].indexOf(v)>-1) out.push(parseInt(k,10)) }); }
+    out.sort(function(a,b){return a-b});
+    if(!out.length){ hits.innerHTML='<p class="note">找不到符合的行業名稱。名稱僅為例示，請改用上方下拉選編號。</p>'; return }
+    out.slice(0,8).forEach(function(n){ var b=document.createElement('button'); b.type='button'; b.className='indhit'; b.textContent='編號 '+n+(INDN[n]?'｜'+INDN[n]:''); b.onclick=function(){show(n)}; hits.appendChild(b) });
+    if(out.length>8){ var p=document.createElement('p'); p.className='note'; p.textContent='還有 '+(out.length-8)+' 筆，請輸入更多字。'; hits.appendChild(p) }
+  }
+  q.addEventListener('input',search);
+  sel.addEventListener('change',function(){ if(sel.value) show(parseInt(sel.value,10)) });
+  ['#indN','#indIns','#indAct'].forEach(function(s){ $(s).addEventListener('input',est) });
+})();
 </script>
 </body>
 </html>
