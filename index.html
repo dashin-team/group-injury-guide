@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>團險・職災｜員工出事，這筆錢誰來付？</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzJCOEE3RSIvPjxwYXRoIGQ9Ik0xNiA2bDkgMy41MDB2N2MwIDUuNTAwLTQgOS05IDEwLjUwMC01LTEuNTAwLTktNS05LTEwLjUwMHYtN3oiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjIwMCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xMiAxNmwzIDMgNS02IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMi4yMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==">
+<style>
+:root{
+  --cream:#FBF7EF; --cream2:#F4EEE1; --card:#FFFFFF;
+  --teal:#2B8A7E; --teal-d:#1C5F57; --teal-dd:#143F3A; --foam:#D5EBE5; --foam2:#EAF5F2;
+  --amber:#C98A2B; --amber-bg:#FBF0DB; --ink:#233B38; --ink2:#566B67; --line:#E3DCCB; --rose:#B4584D;
+  --serif:"Noto Serif TC","Noto Serif CJK TC","Source Han Serif TC","Songti TC","PMingLiU","Georgia",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei","Noto Sans CJK TC",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:700;letter-spacing:.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.14em;color:var(--teal-d);background:var(--foam);padding:4px 12px;border-radius:99px;margin-bottom:14px}
+h2{font-size:26px;line-height:1.4;margin-bottom:12px;color:var(--teal-dd)}
+.lead{color:var(--ink2);max-width:46em;margin-bottom:26px}
+.card{background:var(--card);border-radius:24px;padding:24px;box-shadow:0 1px 0 var(--line),0 12px 32px -18px rgba(28,95,87,.28)}
+.grid{display:grid;gap:16px}
+.ico{width:34px;height:34px;stroke:var(--teal);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.small{font-size:13px;color:var(--ink2)}
+.note{font-size:13px;color:var(--ink2);margin-top:12px}
+.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:99px;background:var(--amber-bg);color:#7b5314}
+
+/* topbar */
+.top{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:10px;height:52px}
+.brand{font-family:var(--serif);font-weight:700;color:var(--teal-dd);white-space:nowrap;font-size:17px}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;font-size:14px;color:var(--ink2);padding:6px 10px;border-radius:99px}
+nav a:hover{background:var(--foam2);color:var(--teal-d)}
+
+/* hero */
+.hero{padding:44px 0 36px;background:linear-gradient(180deg,var(--foam2),var(--cream))}
+.hero .wrap{display:grid;gap:26px;align-items:center}
+.hero h1{font-size:34px;line-height:1.3;color:var(--teal-dd);margin-bottom:14px}
+.hero p{color:var(--ink2);font-size:17px;max-width:30em}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;padding:12px 22px;border-radius:99px;font-size:15px;border:0;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:var(--teal-d)}
+.btn.ghost{background:transparent;color:var(--teal-d);border:1.5px solid var(--teal)}
+.hero svg.art{width:100%;max-width:420px;height:auto;justify-self:center}
+
+/* five risks */
+.risks{grid-template-columns:1fr}
+.risk{display:flex;gap:14px;align-items:flex-start;padding:18px 20px}
+.risk .n{font-family:var(--serif);font-size:13px;color:var(--teal);letter-spacing:.1em}
+.risk h3{font-size:18px;margin:2px 0 4px;color:var(--teal-dd)}
+.risk p{font-size:14.5px;color:var(--ink2);line-height:1.7}
+.risk .big{font-family:var(--serif);font-weight:700;color:var(--amber);font-size:20px}
+
+/* diagram */
+.diagram{margin-top:22px}
+.diagram svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink2);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+
+/* flow diagram */
+.flow-lab{font-size:14px;color:var(--ink2);margin-bottom:6px}
+.flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 10px}
+.seg{border-radius:14px;padding:12px 8px;text-align:center;font-size:14.5px;font-weight:600}
+.seg.a{background:var(--foam);border:1.5px solid var(--teal);color:var(--teal-dd)}
+.seg.b{background:var(--amber-bg);border:1.5px solid var(--amber);color:#6b4710}
+.arr{text-align:center;color:var(--ink2);font-size:22px;line-height:1}
+.box{background:#fff;border-radius:14px;padding:12px 10px;text-align:center;font-size:13px;color:var(--ink2)}
+.box b{display:block;font-size:15px;margin-bottom:2px}
+.box.a{border:1.5px solid var(--teal)} .box.a b{color:var(--teal-dd)}
+.box.b{border:1.5px solid var(--amber)} .box.b b{color:#6b4710}
+.arr.c{margin:8px 0}
+.formula{background:var(--teal-dd);color:#fff;border-radius:18px;padding:16px 18px;text-align:center}
+.formula b{display:block;font-size:15.5px;margin-bottom:4px;font-weight:600}
+.formula span{display:block;font-size:13.5px;color:#cfe5e0}
+.formula i{display:block;font-size:12px;color:#9fc6bf;font-style:normal;margin-top:6px}
+@media(min-width:760px){.flow-grid{grid-template-columns:2fr 1fr}}
+.res .v.rng{font-size:20px}
+/* calculator */
+.calc{margin-top:22px;background:linear-gradient(160deg,#fff,var(--foam2))}
+.calc label{font-size:14px;color:var(--ink2);display:block;margin-bottom:6px}
+.inrow{display:grid;gap:14px}
+.field{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:16px;background:#fff;padding:4px 14px;gap:8px}
+.field:focus-within{border-color:var(--teal)}
+.field span{color:var(--ink2);font-size:14px}
+.field input{border:0;outline:0;font-size:22px;font-family:var(--serif);width:100%;padding:8px 0;background:transparent;color:var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--ink2);padding:6px 14px;border-radius:99px;font-size:14px;cursor:pointer;font-family:var(--sans)}
+.chip.on,.chip:hover{border-color:var(--teal);background:var(--foam);color:var(--teal-dd)}
+.results{display:grid;gap:12px;margin-top:20px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.res{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 18px}
+.res .k{font-size:13px;color:var(--ink2)}
+.res .v{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--teal-dd);line-height:1.3}
+.res .f{font-size:12.5px;color:var(--ink2)}
+.res.hl{border-color:var(--amber);background:var(--amber-bg)}
+.res.hl .v{color:#8a5a12}
+.res.gap .v{color:var(--rose)}
+
+/* case */
+.cases{grid-template-columns:1fr}
+.case .tag{margin-bottom:10px}
+.case h3{font-size:19px;color:var(--teal-dd);margin-bottom:8px}
+.nums{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.num{background:var(--foam2);border-radius:14px;padding:8px 14px;min-width:96px}
+.num b{display:block;font-family:var(--serif);font-size:22px;color:var(--teal-dd)}
+.num span{font-size:12.5px;color:var(--ink2)}
+.num.warn{background:var(--amber-bg)} .num.warn b{color:#8a5a12}
+
+
+.c3 .r{margin:12px 0;padding-left:14px;border-left:3px solid var(--foam)}
+.c3 .rl{display:inline-block;font-size:12.5px;font-weight:600;color:var(--teal-dd);background:var(--foam);padding:1px 10px;border-radius:99px;margin-bottom:4px}
+.c3 .r p{font-size:15px}
+.c3 .r.ins{border-left-color:var(--teal)}
+.tag.news{background:var(--foam);color:var(--teal-dd)}
+.src{font-size:13px;margin-top:10px;color:var(--ink2)}
+.src a{color:var(--teal-d);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+.cgroup{font-family:var(--serif);font-size:20px;color:var(--teal-dd);margin:28px 0 12px}
+
+/* why */
+.why{grid-template-columns:1fr}
+.why .card{display:flex;gap:14px}
+.why h3{font-size:17px;margin-bottom:4px;color:var(--teal-dd)}
+.why p{font-size:14.5px;color:var(--ink2)}
+.three{display:grid;gap:10px;margin-top:18px}
+.three div{background:var(--card);border-radius:18px;padding:14px 18px;border:1px solid var(--line);font-size:14.5px}
+.three b{font-family:var(--serif);color:var(--teal);font-size:20px;margin-right:8px}
+
+/* products */
+.prod{border-radius:28px;padding:26px 16px;margin-top:8px}
+@media(max-width:759px){#prodA .wrap,#prodB .wrap{padding:0 10px}}
+.prodA{background:linear-gradient(180deg,#fff,var(--foam2));border:1px solid var(--foam)}
+.prodB{background:linear-gradient(180deg,#fff,#FAF3E3);border:1px solid #EBDDB8}
+.prod .head{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.badge{font-size:12.5px;border-radius:99px;padding:3px 12px;color:#fff;background:var(--teal-d)}
+.prodB .badge{background:var(--amber)}
+.prod h3{font-size:24px;color:var(--teal-dd)}
+.fit{background:#fff;border-left:4px solid var(--teal);border-radius:0 14px 14px 0;padding:10px 16px;margin:14px 0 20px;font-size:15px}
+.prodB .fit{border-color:var(--amber)}
+.sub{font-family:var(--serif);font-size:18px;color:var(--teal-dd);margin:26px 0 10px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{border:1.5px solid var(--line);background:#fff;color:var(--ink2);padding:8px 16px;border-radius:99px;font-size:14.5px;cursor:pointer;font-family:var(--sans)}
+.tab.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.prodB .tab.on{background:var(--amber);border-color:var(--amber)}
+.tab.sm{padding:5px 14px;font-size:14px;flex:none;white-space:nowrap}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:14px;overflow:hidden}
+.tbl th,.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--foam);color:var(--teal-dd);font-weight:600;font-size:13.5px}
+.tbl tr.sec td{background:var(--cream2);font-family:var(--serif);color:var(--teal-dd);font-weight:700}
+.tbl td.v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl td.miss,.miss{color:#9a8f77;font-size:12.5px;font-style:normal}
+.scroll{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:#fff}
+.scroll .tbl{min-width:560px;border-radius:0}
+.scroll.s2 .tbl{min-width:420px}
+.prem{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.prem .p{background:#fff;border-radius:16px;padding:12px 14px;border:1px solid var(--line)}
+.prem .p b{font-family:var(--serif);font-size:22px;color:var(--teal-dd)} .prem .p span{display:block;font-size:12.5px;color:var(--ink2)}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin-top:12px}
+details summary{cursor:pointer;font-weight:600;color:var(--teal-dd);list-style:none}
+details summary::before{content:"＋ ";color:var(--teal)}
+details[open] summary::before{content:"－ "}
+details .in{margin-top:12px}
+.plist{display:grid;gap:8px;list-style:none}
+.plist li{background:#fff;border-radius:14px;padding:10px 14px;font-size:14.5px;border:1px solid var(--line)}
+.plist li b{color:var(--teal-dd)}
+.feat{grid-template-columns:1fr}
+.feat .f{background:#fff;border-radius:16px;padding:12px 16px;border:1px solid var(--line)}
+.feat .f b{font-family:var(--serif);color:#8a5a12;display:block}
+.feat .f span{font-size:14px;color:var(--ink2)}
+.pillgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pillgrid span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:13.5px}
+ul.dots{padding-left:1.2em} ul.dots li{margin:4px 0;font-size:14.5px}
+
+/* steps */
+.steps{grid-template-columns:1fr}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .no{font-family:var(--serif);font-size:34px;line-height:1;color:var(--foam);-webkit-text-stroke:1.5px var(--teal);flex:none;width:52px}
+.step h3{font-size:18px;color:var(--teal-dd);margin-bottom:2px}
+.step p{font-size:14.5px;color:var(--ink2)}
+
+/* footer */
+footer{background:var(--teal-dd);color:#cfe5e0;padding:30px 0 40px;text-align:center;font-size:13.5px;line-height:2}
+
+@media(min-width:760px){.flow-grid{grid-template-columns:2fr 1fr}}
+.res .v.rng{font-size:20px}
+/* calculator */
+.calc{margin-top:22px;background:linear-gradient(160deg,#fff,var(--foam2))}
+.calc label{font-size:14px;color:var(--ink2);display:block;margin-bottom:6px}
+.inrow{display:grid;gap:14px}
+.field{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:16px;background:#fff;padding:4px 14px;gap:8px}
+.field:focus-within{border-color:var(--teal)}
+.field span{color:var(--ink2);font-size:14px}
+.field input{border:0;outline:0;font-size:22px;font-family:var(--serif);width:100%;padding:8px 0;background:transparent;color:var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--ink2);padding:6px 14px;border-radius:99px;font-size:14px;cursor:pointer;font-family:var(--sans)}
+.chip.on,.chip:hover{border-color:var(--teal);background:var(--foam);color:var(--teal-dd)}
+.results{display:grid;gap:12px;margin-top:20px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.res{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 18px}
+.res .k{font-size:13px;color:var(--ink2)}
+.res .v{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--teal-dd);line-height:1.3}
+.res .f{font-size:12.5px;color:var(--ink2)}
+.res.hl{border-color:var(--amber);background:var(--amber-bg)}
+.res.hl .v{color:#8a5a12}
+.res.gap .v{color:var(--rose)}
+
+/* case */
+.cases{grid-template-columns:1fr}
+.case .tag{margin-bottom:10px}
+.case h3{font-size:19px;color:var(--teal-dd);margin-bottom:8px}
+.nums{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.num{background:var(--foam2);border-radius:14px;padding:8px 14px;min-width:96px}
+.num b{display:block;font-family:var(--serif);font-size:22px;color:var(--teal-dd)}
+.num span{font-size:12.5px;color:var(--ink2)}
+.num.warn{background:var(--amber-bg)} .num.warn b{color:#8a5a12}
+
+
+.c3 .r{margin:12px 0;padding-left:14px;border-left:3px solid var(--foam)}
+.c3 .rl{display:inline-block;font-size:12.5px;font-weight:600;color:var(--teal-dd);background:var(--foam);padding:1px 10px;border-radius:99px;margin-bottom:4px}
+.c3 .r p{font-size:15px}
+.c3 .r.ins{border-left-color:var(--teal)}
+.tag.news{background:var(--foam);color:var(--teal-dd)}
+.src{font-size:13px;margin-top:10px;color:var(--ink2)}
+.src a{color:var(--teal-d);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+.cgroup{font-family:var(--serif);font-size:20px;color:var(--teal-dd);margin:28px 0 12px}
+
+/* why */
+.why{grid-template-columns:1fr}
+.why .card{display:flex;gap:14px}
+.why h3{font-size:17px;margin-bottom:4px;color:var(--teal-dd)}
+.why p{font-size:14.5px;color:var(--ink2)}
+.three{display:grid;gap:10px;margin-top:18px}
+.three div{background:var(--card);border-radius:18px;padding:14px 18px;border:1px solid var(--line);font-size:14.5px}
+.three b{font-family:var(--serif);color:var(--teal);font-size:20px;margin-right:8px}
+
+/* products */
+.prod{border-radius:28px;padding:26px 16px;margin-top:8px}
+@media(max-width:759px){#prodA .wrap,#prodB .wrap{padding:0 10px}}
+.prodA{background:linear-gradient(180deg,#fff,var(--foam2));border:1px solid var(--foam)}
+.prodB{background:linear-gradient(180deg,#fff,#FAF3E3);border:1px solid #EBDDB8}
+.prod .head{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.badge{font-size:12.5px;border-radius:99px;padding:3px 12px;color:#fff;background:var(--teal-d)}
+.prodB .badge{background:var(--amber)}
+.prod h3{font-size:24px;color:var(--teal-dd)}
+.fit{background:#fff;border-left:4px solid var(--teal);border-radius:0 14px 14px 0;padding:10px 16px;margin:14px 0 20px;font-size:15px}
+.prodB .fit{border-color:var(--amber)}
+.sub{font-family:var(--serif);font-size:18px;color:var(--teal-dd);margin:26px 0 10px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{border:1.5px solid var(--line);background:#fff;color:var(--ink2);padding:8px 16px;border-radius:99px;font-size:14.5px;cursor:pointer;font-family:var(--sans)}
+.tab.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.prodB .tab.on{background:var(--amber);border-color:var(--amber)}
+.tab.sm{padding:5px 14px;font-size:14px;flex:none;white-space:nowrap}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:14px;overflow:hidden}
+.tbl th,.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl th{background:var(--foam);color:var(--teal-dd);font-weight:600;font-size:13.5px}
+.tbl tr.sec td{background:var(--cream2);font-family:var(--serif);color:var(--teal-dd);font-weight:700}
+.tbl td.v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl td.miss,.miss{color:#9a8f77;font-size:12.5px;font-style:normal}
+.scroll{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:#fff}
+.scroll .tbl{min-width:560px;border-radius:0}
+.scroll.s2 .tbl{min-width:420px}
+.prem{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.prem .p{background:#fff;border-radius:16px;padding:12px 14px;border:1px solid var(--line)}
+.prem .p b{font-family:var(--serif);font-size:22px;color:var(--teal-dd)} .prem .p span{display:block;font-size:12.5px;color:var(--ink2)}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin-top:12px}
+details summary{cursor:pointer;font-weight:600;color:var(--teal-dd);list-style:none}
+details summary::before{content:"＋ ";color:var(--teal)}
+details[open] summary::before{content:"－ "}
+details .in{margin-top:12px}
+.plist{display:grid;gap:8px;list-style:none}
+.plist li{background:#fff;border-radius:14px;padding:10px 14px;font-size:14.5px;border:1px solid var(--line)}
+.plist li b{color:var(--teal-dd)}
+.feat{grid-template-columns:1fr}
+.feat .f{background:#fff;border-radius:16px;padding:12px 16px;border:1px solid var(--line)}
+.feat .f b{font-family:var(--serif);color:#8a5a12;display:block}
+.feat .f span{font-size:14px;color:var(--ink2)}
+.pillgrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pillgrid span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:13.5px}
+ul.dots{padding-left:1.2em} ul.dots li{margin:4px 0;font-size:14.5px}
+
+/* steps */
+.steps{grid-template-columns:1fr}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .no{font-family:var(--serif);font-size:34px;line-height:1;color:var(--foam);-webkit-text-stroke:1.5px var(--teal);flex:none;width:52px}
+.step h3{font-size:18px;color:var(--teal-dd);margin-bottom:2px}
+.step p{font-size:14.5px;color:var(--ink2)}
+
+/* footer */
+footer{background:var(--teal-dd);color:#cfe5e0;padding:30px 0 40px;text-align:center;font-size:13.5px;line-height:2}
+
+@media(min-width:760px){
+  section{padding:76px 0}
+  h2{font-size:32px}
+  .hero{padding:72px 0 60px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr}
+  .hero h1{font-size:50px}
+  .risks{grid-template-columns:repeat(2,1fr)}
+  .risk.wide{grid-column:span 2}
+  .cases{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .three{grid-template-columns:repeat(3,1fr)}
+  .inrow{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .feat{grid-template-columns:repeat(2,1fr)}
+  .prem{grid-template-columns:repeat(4,1fr)}
+  .prod{padding:38px 36px}
+  .two{grid-template-columns:repeat(2,1fr)}
+  .tbl{font-size:15px}
+}
+
+/* ===== v3 compact ===== */
+section{padding:34px 0}
+h2{font-size:21px;margin-bottom:8px;text-wrap:balance}
+.lead{margin-bottom:16px;font-size:15px}
+.card{padding:18px}
+.hero{padding:26px 0 22px}
+.hero h1{font-size:30px;margin-bottom:10px}
+.hero p{font-size:15.5px}
+.hero .cta{margin-top:16px}
+.hero svg.art{display:none}
+.btn{padding:10px 20px}
+.risks{display:grid;gap:10px;padding:14px 18px}
+.risk{display:flex;gap:12px;align-items:center;padding:0}
+.risk .ico{width:26px;height:26px}
+.risk b{display:block;font-family:var(--serif);color:var(--teal-dd);font-size:16px;line-height:1.4}
+.risk span{font-size:14px;color:var(--ink2);line-height:1.5;display:block}
+.risk .big{font-style:normal;font-family:var(--serif);font-weight:700;color:var(--amber);font-size:16px}
+.calc{margin-top:16px}
+.calc h3{font-size:19px;color:var(--teal-dd);margin-bottom:10px}
+.results{grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.res{padding:10px 12px}
+.res .v{font-size:19px}
+.res .v.rng{font-size:17px}
+.res.wide2{grid-column:span 2}
+.res.gap{grid-column:span 2}
+#gapbox2{grid-column:span 2}
+.field input{font-size:20px;padding:4px 0}
+.chips{margin-top:8px}
+.cases{gap:12px}
+.case h3{font-size:18px;margin-bottom:6px}
+.case p{font-size:14.5px;line-height:1.7;margin:4px 0}
+.case p b{display:inline-block;font-size:12.5px;color:var(--teal-dd);background:var(--foam);padding:0 9px;border-radius:99px;margin-right:8px;font-family:var(--sans)}
+.case p.ins b{background:var(--teal);color:#fff}
+.case .tag{margin-bottom:6px}
+.src{margin-top:8px;font-size:13px}
+.src a{color:var(--teal-d);text-decoration:underline;text-underline-offset:3px}
+.tag.news{background:var(--foam);color:var(--teal-dd)}
+.whyc{display:grid;gap:12px}
+.whyc>div{display:flex;gap:12px;align-items:flex-start}
+.whyc .ico{width:26px;height:26px;margin-top:3px}
+.whyc p{font-size:14.5px;color:var(--ink2);line-height:1.7}
+.whyc p b{color:var(--teal-dd);margin-right:4px}
+.prod{padding:18px 14px;margin-top:0}
+.prod h3{font-size:21px}
+.fit{margin:10px 0 12px;font-size:14.5px;padding:8px 14px}
+.plist li{padding:8px 12px;font-size:14px;line-height:1.65}
+.sub{margin:14px 0 8px;font-size:16px}
+.tabs{margin-bottom:10px;gap:6px}
+.tab{padding:6px 13px;font-size:14px}
+details{margin-top:10px;padding:10px 14px}
+.steps{list-style:none;display:grid;gap:10px;padding:16px 18px}
+.steps li{display:flex;gap:12px;align-items:baseline}
+.steps .no{font-family:var(--serif);font-size:20px;color:var(--teal);flex:none;width:30px}
+.steps p{font-size:14.5px;color:var(--ink2);line-height:1.6}
+.steps p b{color:var(--teal-dd);margin-right:8px}
+footer{padding:22px 0 28px}
+@media(max-width:759px){#prodA .wrap,#prodB .wrap{padding:0 10px}}
+@media(min-width:760px){
+  section{padding:56px 0}
+  h2{font-size:28px}
+  .hero{padding:56px 0 48px}
+  .hero svg.art{display:block}
+  .hero h1{font-size:46px}
+  .risks{grid-template-columns:repeat(2,1fr);padding:20px 24px;gap:14px 28px}
+  .results{grid-template-columns:repeat(4,1fr)}
+  .res.wide2{grid-column:span 1}
+  .res.gap,#gapbox2{grid-column:span 2}
+  .cases{grid-template-columns:repeat(3,1fr)}
+  .whyc{grid-template-columns:1fr 1fr;gap:18px 32px}
+  .steps{grid-template-columns:1fr 1fr}
+  .prod{padding:30px 32px}
+  .prem{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-med" viewBox="0 0 34 34"><rect x="5" y="9" width="24" height="18" rx="4"/><path d="M17 13v10M12 18h10"/><path d="M12 9V6h10v3"/></symbol>
+ <symbol id="i-wage" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11"/><path d="M17 10v14M13 14c0-2 8-2 8 0s-8 3-8 5 8 2 8 0"/></symbol>
+ <symbol id="i-end" viewBox="0 0 34 34"><rect x="6" y="6" width="22" height="22" rx="5"/><path d="M11 17h12M11 12h8M11 22h6"/></symbol>
+ <symbol id="i-dis" viewBox="0 0 34 34"><path d="M10 28V14l7-8 7 8v14"/><path d="M6 28h22M14 28v-7h6v7"/></symbol>
+ <symbol id="i-life" viewBox="0 0 34 34"><path d="M17 28s-10-6-10-14a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 8-10 14-10 14z"/></symbol>
+ <symbol id="i-scale" viewBox="0 0 34 34"><path d="M17 6v22M9 28h16M7 11h20"/><path d="M7 11l-4 8a4 4 0 008 0zM27 11l-4 8a4 4 0 008 0z"/></symbol>
+ <symbol id="i-people" viewBox="0 0 34 34"><circle cx="12" cy="12" r="4.5"/><circle cx="24" cy="13" r="3.5"/><path d="M4 28c0-5 3.5-8 8-8s8 3 8 8M21 21c4-.5 8 1.5 8 7"/></symbol>
+ <symbol id="i-shield" viewBox="0 0 34 34"><path d="M17 5l10 4v8c0 6-4.5 10-10 12C11.500 27 7 23 7 17V9z"/><path d="M12.500 17l3.500 3.500 6-7"/></symbol>
+ <symbol id="i-swap" viewBox="0 0 34 34"><path d="M6 12h20l-5-5M28 22H8l5 5"/></symbol>
+ <symbol id="i-doc" viewBox="0 0 34 34"><path d="M9 5h11l6 6v18H9z"/><path d="M20 5v6h6M13 17h9M13 22h9"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 34 34"><rect x="10" y="4" width="14" height="26" rx="3"/><path d="M15 26h4"/></symbol>
+ <symbol id="i-cross" viewBox="0 0 34 34"><rect x="5" y="5" width="24" height="24" rx="6"/><path d="M17 11v12M11 17h12"/></symbol>
+</svg>
+<header class="top">
+ <div class="wrap">
+  <span class="brand">團險・職災</span>
+  <nav id="mainnav"><a href="#duty">老闆的責任</a><a href="#cases">案例</a><a href="#prodA">頭家安康2.0</a><a href="#prodB">好頭家PLUS二代</a><a href="#after">職災怎麼辦</a></nav>
+ </div>
+</header>
+
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">給每一位用心經營的老闆</span>
+   <h1>員工出事，<br>這筆錢誰來付？</h1>
+   <p>職災發生時，法律上雇主要承擔的補償責任，往往比想像中更完整。先把這筆錢算清楚，再看看有沒有比「自己扛」更從容的做法。</p>
+   <div class="cta"><a class="btn" href="#duty">看看老闆的責任</a><a class="btn ghost" href="#calc">用月薪試算</a></div>
+  </div>
+  <svg class="art" viewBox="0 0 420 320" role="img" aria-label="工廠與守護盾牌的線條插圖">
+   <ellipse cx="210" cy="288" rx="170" ry="14" fill="#D5EBE5"/>
+   <g fill="none" stroke="#2B8A7E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 280V150l60 -34v34l60 -34v34l60 -34v34h40v130z" fill="#fff"/>
+    <rect x="278" y="70" width="26" height="80" rx="3" fill="#fff"/>
+    <path d="M278 70h26M284 52c8-6 -6-14 6-22"/>
+    <rect x="86" y="196" width="30" height="30" rx="3"/><rect x="142" y="196" width="30" height="30" rx="3"/><rect x="198" y="196" width="30" height="30" rx="3"/>
+    <rect x="252" y="214" width="40" height="66" rx="3"/>
+   </g>
+   <g transform="translate(262,120)">
+    <path d="M50 0l56 22v44c0 34-24 56-56 68C18 122-6 100-6 66V22z" fill="#FBF0DB" stroke="#C98A2B" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M26 66l20 20 36-40" fill="none" stroke="#2B8A7E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+   </g>
+  </svg>
+ </div>
+</div>
+
+<section id="duty">
+ <div class="wrap">
+  <h2>勞基法第59條，<br>雇主要補償的五件事</h2>
+  <p class="lead">員工遭遇職業災害而致死亡、失能、傷害或疾病時，不論過失在誰，這五筆錢都是雇主的責任風險。</p>
+  <div class="card risks">
+   <div class="risk"><svg class="ico"><use href="#i-med"/></svg><div><b>醫療補償</b><span>補償「必須之醫療費用」</span></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-wage"/></svg><div><b>工資補償</b><span>公傷醫療、休養期間，補償原領工資</span></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-end"/></svg><div><b>工資終結補償</b><span><i class="big">40 個月</i> 平均工資</span></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-dis"/></svg><div><b>失能補償</b><span>依勞保失能給付標準，<i class="big">1.5～60 個月</i> 平均工資</span></div></div>
+   <div class="risk"><svg class="ico"><use href="#i-life"/></svg><div><b>死亡補償</b><span><i class="big">45 個月</i> 平均工資（含喪葬費）</span></div></div>
+  </div>
+  <p class="note">平均工資：依勞動基準法第二條第四款，為事由發生當日前六個月所得工資總額 ÷ 該期間之總日數所得之金額。</p>
+
+  <div class="card calc" id="calc">
+   <h3>補償金額，先概算一下</h3>
+   <div class="inrow">
+    <div><label for="wage">月平均工資</label><div class="field"><span>NT$</span><input id="wage" type="number" inputmode="numeric" min="0" step="1000" value="30000"></div>
+     <div class="chips" id="wchips"><button class="chip on" data-w="30000" type="button">30,000</button><button class="chip" data-w="40000" type="button">40,000</button><button class="chip" data-w="50000" type="button">50,000</button><button class="chip" data-w="70000" type="button">70,000</button></div></div>
+    <div><label for="paid">已有的保險／勞保給付（選填，可抵充）</label><div class="field"><span>NT$</span><input id="paid" type="number" inputmode="numeric" min="0" step="10000" placeholder="選填"></div>
+     <div class="chips" id="pchips"><button class="chip" data-p="1000000" type="button">100 萬</button><button class="chip" data-p="2000000" type="button">200 萬</button><button class="chip" data-p="3000000" type="button">300 萬</button><button class="chip" data-p="0" type="button">清除</button></div></div>
+   </div>
+   <div class="results" id="results">
+    <div class="res hl"><div class="k">死亡補償（含喪葬費）</div><div class="v" id="r-death">—</div><div class="f">月平均工資 × 45 個月</div></div>
+    <div class="res"><div class="k">工資終結補償</div><div class="v" id="r-end">—</div><div class="f">月平均工資 × 40 個月</div></div>
+    <div class="res wide2"><div class="k">失能補償（範圍）</div><div class="v rng" id="r-dis">—</div><div class="f">月平均工資 × 1.5～60 個月，依失能等級</div></div>
+    <div class="res wide2"><div class="k">休養期間每月工資補償</div><div class="v" id="r-month">—</div><div class="f">補償原領工資（以休養月數計）</div></div>
+    <div class="res gap" id="gapbox" style="display:none"><div class="k">死亡補償扣除已有給付後，尚需補足</div><div class="v" id="r-gap">—</div></div>
+    <div class="res" id="gapbox2" style="display:none"><div class="k">終結工資補償扣除已有給付後，尚需補足</div><div class="v" id="r-gap2">—</div></div>
+   </div>
+   <p class="note">醫療補償依實際發生金額計，未列入試算。依勞基法第59條，勞保給付可抵充，不足仍須由雇主補足，此為概算。</p>
+  </div>
+ </div>
+</section>
+
+<section id="cases" style="background:var(--cream2)">
+ <div class="wrap">
+  <h2>真實發生過的事</h2>
+  <p class="lead"><b>民法第184條</b>談的是：因故意或過失造成他人損害，須負賠償責任。職災中若雇主被認為有過失，家屬還可能依民法求償，金額可能高於勞基法補償，由調解或法院個案認定。</p>
+  <div class="grid cases">
+   <div class="card case"><span class="tag">同業分享案例（非新聞報導）</span><h3>吊籃墜落・和解 260 萬</h3>
+    <p><b>發生什麼事</b>某廣告招牌公司施工時吊籃掉落，員工死亡，經公所調解和解。</p>
+    <p><b>老闆要面對</b>總和解金約 260 萬（講者憑記憶口述），當時保額 100 萬，約 160 萬由老闆自己負擔。</p>
+    <p class="ins"><b>有團險會怎樣</b>雇主補償金可依法抵充雇主責任；保額夠不夠，投保當下就要想。</p></div>
+   <div class="card case"><span class="tag news">公開新聞・中央社 2026/4/19</span><h3>屋頂墜落・判賠逾 400 萬</h3>
+    <p><b>發生什麼事</b>高雄一名工人在民宅屋頂施工，自梯子墜落（總墜落高度 7.8 公尺）不治，家屬對雇主提起民事訴訟。</p>
+    <p><b>老闆要面對</b>橋頭地方法院認雇主未依法設置防墜設備，判賠家屬合計逾 400 萬元，可上訴。</p>
+    <p class="ins"><b>有團險會怎樣</b>好頭家PLUS二代：補償金可作為和解賠償金抵充雇主責任；民事責任超過保額時，另有超額雇主意外責任險。</p>
+    <p class="src"><a href="https://www.cna.com.tw/news/asoc/202604190080.aspx" target="_blank" rel="noopener noreferrer">閱讀原始報導（中央社 CNA，2026/4/19）</a></p></div>
+   <div class="card case"><span class="tag">同業分享案例（非新聞報導）</span><h3>工地墜落・調解 830 萬</h3>
+    <p><b>發生什麼事</b>某工地員工高處墜落死亡，家屬有父母、配偶與年幼子女，在勞工局主持的調解會上和解。</p>
+    <p><b>老闆要面對</b>和解金額 830 萬，遠高於勞基法第59條的 45 個月；差額屬民法層面，含家屬往後的扶養與精神慰撫。</p>
+    <p class="ins"><b>有團險會怎樣</b>勞基法補償的部分可由保險給付抵充；超過的部分，正是「超額雇主意外責任險」的設計方向。</p></div>
+  </div>
+  <p class="note">同業案例為同業分享的口述，已隱去人名與公司名；新聞為一審判決，仍可上訴。案例僅作風險說明，不代表個案必然結果，也不承諾任何理賠金額。</p>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap">
+  <h2>不是要多花錢，<br>是讓這筆錢有個出口</h2>
+  <div class="card whyc">
+   <div><svg class="ico"><use href="#i-shield"/></svg><p><b>保費，遠小於一次出事要付的錢。</b>以月平均工資 3 萬計，死亡補償概算約 135 萬（45 個月）；團險保費每年固定、可預期。</p></div>
+   <div><svg class="ico"><use href="#i-doc"/></svg><p><b>依法，團險給付可以抵充。</b>雇主出資投保的商業保險，員工領到的給付可抵充勞基法第59條補償，不足才需自己補。</p></div>
+   <div><svg class="ico"><use href="#i-people"/></svg><p><b>員工感受得到，也願意留下。</b>知道公司多想了一層，員工更安心，也有助留才與公司形象。</p></div>
+   <div><svg class="ico"><use href="#i-swap"/></svg><p><b>風險轉嫁，而不是自己扛。</b>用合理成本，把可能一次爆發的缺口交給保險公司，資金留在經營上。</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="prodA" style="padding-top:8px">
+ <div class="wrap">
+  <div class="prod prodA">
+   <div class="head"><span class="badge">富邦人壽・人壽團險</span></div>
+   <h3 class="serif">頭家安康 2.0</h3>
+   <div class="fit"><b>適合誰：</b>想讓每位員工自己挑計劃，並把職災（GOH）、意外與住院醫療一起規劃的老闆；投保人數至少 5 人。</div>
+   <ul class="plist">
+    <li><b>主保障：</b>員工擇一計劃 A～F，以 GMA2 團體意外傷害為主，搭配 GMR 意外醫療、GAHI 日額醫療。</li>
+    <li><b>職災核心 GOH：</b>團體職業災害傷害保險，給付約定保險金與已獲勞保職災給付之差額，依職災編號計費。</li>
+    <li><b>加強／企業保障：</b>GTL、GHR、GSHS 可加選；企業保障 GOH、GOPA、GADI 三擇一。</li>
+    <li><b>投保：</b>公司 100% 付費，承保年齡 15～70 歲。</li>
+   </ul>
+   <details><summary>展開計劃 A～F 保障與保費</summary><div class="in">
+    <div class="tabs" id="lifeTabs"></div>
+    <div id="lifeCard"></div>
+    <p class="note">職業等級 1 至 4 級之 66 歲（含）以上員工不得投保計劃 D。計劃 E、F 之員工無加選加強保障，且僅可加選企業保障方案 1（GOH）。</p>
+   </div></details>
+   <details><summary>展開 GOH 職災費率（依職災編號）</summary><div class="in">
+    <p class="small" style="margin-bottom:8px">年繳費率（每千元）：職保內費率／超過職保投保薪資之職保外費率。</p>
+    <div class="scroll s2"><table class="tbl"><tr><th>職災編號</th><th>職保內</th><th>職保外</th></tr><tr><td>1</td><td class="v">5.6</td><td class="v">24.7</td></tr><tr><td>2</td><td class="v">4.7</td><td class="v">21.4</td></tr><tr><td>3</td><td class="v">23.2</td><td class="v">104.3</td></tr><tr><td>4</td><td class="v">5.0</td><td class="v">22.5</td></tr><tr><td>5</td><td class="v">4.7</td><td class="v">21.4</td></tr><tr><td>6</td><td class="v">4.0</td><td class="v">18.1</td></tr><tr><td>7</td><td class="v">3.4</td><td class="v">15.7</td></tr><tr><td>8</td><td class="v">4.4</td><td class="v">20.2</td></tr><tr><td>9</td><td class="v">10.6</td><td class="v">47.2</td></tr><tr><td>10</td><td class="v">9.3</td><td class="v">41.6</td></tr><tr><td>11</td><td class="v">4.7</td><td class="v">21.4</td></tr><tr><td>12</td><td class="v">5.0</td><td class="v">22.5</td></tr><tr><td>13</td><td class="v">5.9</td><td class="v">26.9</td></tr><tr><td>14</td><td class="v">9.7</td><td class="v">43.8</td></tr><tr><td>15</td><td class="v">10.2</td><td class="v">46.0</td></tr><tr><td>16</td><td class="v">8.2</td><td class="v">37.0</td></tr><tr><td>17</td><td class="v">6.3</td><td class="v">28.2</td></tr><tr><td>18</td><td class="v">2.7</td><td class="v">12.4</td></tr><tr><td>19</td><td class="v">6.3</td><td class="v">28.2</td></tr><tr><td>20</td><td class="v">5.9</td><td class="v">26.9</td></tr><tr><td>21</td><td class="v">4.4</td><td class="v">20.2</td></tr><tr><td>22</td><td class="v">6.3</td><td class="v">28.2</td></tr><tr><td>23</td><td class="v">9.0</td><td class="v">40.5</td></tr><tr><td>24</td><td class="v">5.6</td><td class="v">24.7</td></tr><tr><td>25</td><td class="v">14.4</td><td class="v">65.1</td></tr><tr><td>26</td><td class="v">8.8</td><td class="v">39.3</td></tr><tr><td>27</td><td class="v">10.2</td><td class="v">46.0</td></tr><tr><td>28</td><td class="v">11.9</td><td class="v">53.9</td></tr><tr><td>29</td><td class="v">11.3</td><td class="v">50.6</td></tr><tr><td>30</td><td class="v">4.3</td><td class="v">19.1</td></tr><tr><td>31</td><td class="v">4.0</td><td class="v">18.1</td></tr><tr><td>32</td><td class="v">9.7</td><td class="v">43.8</td></tr><tr><td>33</td><td class="v">21.3</td><td class="v">95.5</td></tr><tr><td>34</td><td class="v">4.7</td><td class="v">21.4</td></tr><tr><td>35</td><td class="v">4.0</td><td class="v">18.1</td></tr><tr><td>36</td><td class="v">5.2</td><td class="v">23.5</td></tr><tr><td>37</td><td class="v">4.7</td><td class="v">21.4</td></tr><tr><td>38</td><td class="v">4.4</td><td class="v">20.2</td></tr><tr><td>39</td><td class="v">4.3</td><td class="v">19.1</td></tr><tr><td>40</td><td class="v">3.1</td><td class="v">13.4</td></tr><tr><td>41</td><td class="v">3.1</td><td class="v">13.4</td></tr><tr><td>42</td><td class="v">2.7</td><td class="v">12.4</td></tr><tr><td>43</td><td class="v">2.7</td><td class="v">12.4</td></tr><tr><td>44</td><td class="v">3.8</td><td class="v">16.9</td></tr><tr><td>45</td><td class="v">3.4</td><td class="v">15.7</td></tr><tr><td>46</td><td class="v">3.1</td><td class="v">13.4</td></tr><tr><td>47</td><td class="v">3.2</td><td class="v">14.5</td></tr><tr><td>48</td><td class="v">5.6</td><td class="v">24.7</td></tr><tr><td>49</td><td class="v">4.3</td><td class="v">19.1</td></tr><tr><td>50</td><td class="v">2.7</td><td class="v">12.4</td></tr><tr><td>51</td><td class="v">2.7</td><td class="v">12.4</td></tr><tr><td>52</td><td class="v">3.8</td><td class="v">16.9</td></tr><tr><td>53</td><td class="v">3.2</td><td class="v">14.5</td></tr><tr><td>54</td><td class="v">5.6</td><td class="v">24.7</td></tr><tr><td>55</td><td class="v">4.4</td><td class="v">20.2</td></tr></table></div>
+   </div></details>
+  </div>
+ </div>
+</section>
+
+<section id="prodB" style="padding-top:8px">
+ <div class="wrap">
+  <div class="prod prodB">
+   <div class="head"><span class="badge">富邦產險・產險團體專案</span></div>
+   <h3 class="serif">好頭家 PLUS 二代</h3>
+   <div class="fit"><b>適合誰：</b>想把執行職務期間的雇主補償責任與超額民事責任放在同一專案，並兼顧非執行職務期間團體傷害保障的老闆。</div>
+   <ul class="plist">
+    <li><b>雇主補償契約責任險：</b>執行職務期間，無須論責；補償金可作為和解賠償金抵充雇主責任。</li>
+    <li><b>團體傷害險：</b>非執行職務期間的傷害保障。</li>
+    <li><b>超額雇主意外責任險：</b>民事責任超過雇補險保額時，協助和解或訴訟賠償（一般行業須投保方案二以上）。</li>
+    <li><b>職災 1 級失能：</b>給付升級為死亡及失能保額之 110%。</li>
+   </ul>
+   <h4 class="sub">選擇行業版本</h4>
+   <div class="tabs" id="haoVer"></div>
+   <details><summary>展開方案保額與保費</summary><div class="in">
+    <div class="tabs" id="haoPlan"></div>
+    <div id="haoCard"></div>
+   </div></details>
+   <details><summary>加值保障自由配</summary><div class="in" id="haoAdd"></div></details>
+   <details><summary>適用／除外行業與承保規定</summary><div class="in">
+    <div id="haoScope"></div>
+    <h4 class="sub" style="margin-top:16px">承保規定</h4>
+    <ul class="dots" id="haoRules"></ul>
+    <p class="note">保險期間：一年。</p>
+   </div></details>
+  </div>
+ </div>
+</section>
+
+<section id="after">
+ <div class="wrap">
+  <h2>發生職災怎麼辦？</h2>
+  <ol class="steps card">
+   <li><span class="no">01</span><p><b>先送醫</b>先確保員工安全與治療。</p></li>
+   <li><span class="no">02</span><p><b>通報</b>依公司流程通報主管、人資，確認事故時間地點。</p></li>
+   <li><span class="no">03</span><p><b>保留資料</b>診斷證明、醫療收據、現場照片與相關人員聯絡方式。</p></li>
+   <li><span class="no">04</span><p><b>通知保險業務員／理賠窗口</b>確認適用保險與送件文件。</p></li>
+  </ol>
+ </div>
+</section>
+
+<footer>
+ <div>實際內容以保單條款為準。</div>
+ <div>消費者於購買前應詳閱銷售文件。</div>
+ <div>本頁僅供參考，不構成要約。</div>
+</footer>
+
+<script>
+var LIFE={"plans": ["A", "B", "C", "D", "E", "F"], "rows": [["GMA2 團體倍數型意外傷害保險（乙型）", null, null], ["一般意外身故或喪葬費用保險金", ["100萬", "200萬", "300萬", "500萬", "100萬", "200萬"], null], ["【空中】大眾運輸工具意外身故", ["200萬", "400萬", "600萬", "1,000萬", "200萬", "400萬"], null], ["【水上/陸地】大眾運輸工具、公共建築物火災/電梯意外身故", ["100萬", "200萬", "300萬", "500萬", "100萬", "200萬"], null], ["一般意外失能", ["5～100萬", "10～200萬", "15～300萬", "25～500萬", "5～100萬", "10～200萬"], null], ["【空中】大眾運輸工具意外失能", ["10～200萬", "20～400萬", "30～600萬", "50～1,000萬", "10～200萬", "20～400萬"], null], ["【水上/陸地】大眾運輸工具、公共建築物火災/電梯意外失能", ["5～100萬", "10～200萬", "15～300萬", "25～500萬", "5～100萬", "10～200萬"], null], ["重大燒燙傷保險金", ["10萬或40萬", "20萬或80萬", "30萬或120萬", "50萬或200萬", "10萬或40萬", "20萬或80萬"], null], ["GMR 意外傷害醫療附加條款", null, null], ["意外傷害醫療保險金（最高）", ["3萬", "3萬", "4萬", "5萬", "2萬", "2萬"], "以健保身分就醫，限額提高1.35倍：4.05萬／4.05萬／5.4萬／6.75萬／2.7萬／2.7萬"], ["GAHI 日額型團體傷害醫療保險", null, null], ["意外傷害住院醫療（每次事故最高365天）", ["1,500元/日", "1,500元/日", "1,500元/日", "2,000元/日", "1,000元/日", "1,000元/日"], null], ["加護病房醫療（每次事故最高365天）", ["1,500元/日", "1,500元/日", "1,500元/日", "2,000元/日", "1,000元/日", "1,000元/日"], null], ["骨折醫療（依骨折部位及程度）最高", ["4.5萬", "4.5萬", "4.5萬", "6萬", "3萬", "3萬"], null], ["門診手術醫療（每次事故給付一次為限）", ["3,000元/次", "3,000元/次", "3,000元/次", "4,000元/次", "2,000元/次", "2,000元/次"], null]], "prem": [["職業等級 1～3 級", ["1,524", "2,144", "2,896", "4,397", "—", "—"]], ["職業等級 4 級", ["4,657", "6,937", "9,471", "14,747", "—", "—"]], ["職業等級 5 級", ["—", "—", "—", "—", "6,863", "10,573"]], ["職業等級 6 級", ["—", "—", "—", "—", "8,824", "13,594"]]]};
+var HAO={"general": {"name": "一般行業", "plans": ["方案一", "方案二", "方案三", "方案四", "方案五"], "cat": "承保職業類別：1～4 類", "rows": [["sec", "雇主補償契約責任險（執行職務期間）"], {"label": "死亡及失能補償金", "unit": "萬", "vals": ["50", "100", "200", "300", "500"]}, {"label": "醫療費用補償金", "unit": "萬", "vals": ["3", "5", "5", "8", "10"]}, {"label": "住院日額補償金（最高90天）", "unit": "元/日", "vals": ["1,000", "1,500", "1,500", "2,500", "3,000"]}, {"label": "重大燒燙傷補償金", "unit": "萬", "vals": ["50", "100", "200", "300", "500"]}, {"label": "加護病房補償金（日額，最高45天）", "unit": "元/日", "vals": ["1,000", "1,000", "1,500", "2,500", "3,000"]}, {"label": "住院慰問金補償金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "3,000", "3,000", "5,000", "10,000"]}, {"label": "燒燙傷病房補償金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "1,000", "2,000", "3,000"]}, {"label": "(超額)雇主意外責任險", "unit": "", "vals": ["─", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬"], "excess": true}, {"label": "每人每一意外事故門診手術慰問金", "unit": "元/次", "vals": ["─", "3,000", "3,000", "3,000", "5,000"]}, ["sec", "團體傷害險（非執行職務期間）"], {"label": "身故及失能保險金（失能等級項目數：11級80項）", "unit": "萬", "vals": ["50", "100", "200", "300", "500"]}, {"label": "傷害醫療實支實付型", "unit": "萬", "vals": ["3", "5", "5", "8", "10"]}, {"label": "傷害醫療住院日額型（最高90天）", "unit": "元/日", "vals": ["1,000", "1,500", "1,500", "2,500", "3,000"]}, {"label": "重大燒燙傷保險金", "unit": "萬", "vals": ["50", "100", "200", "300", "500"]}, {"label": "加護病房保險金（最高45天）", "unit": "元/日", "vals": ["1,000", "1,000", "1,500", "2,500", "3,000"]}, {"label": "住院慰問保險金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "3,000", "3,000", "5,000", "10,000"]}, {"label": "燒燙傷病房保險金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "1,000", "2,000", "3,000"]}], "prem": [["每人年繳保費（職業類別 1～4 類）・投保人數 5～49 人", ["1,030", "1,755", "2,470", "3,765", "5,590"]], ["每人年繳保費（職業類別 1～4 類）・投保人數 50 人以上", ["935", "1,600", "2,255", "3,430", "5,095"]]], "add1": {"label": "加值保障一：職業災害所得補償（可理賠小於三天之職災事故）", "rows": [["職災所得補償金（日額給付，最高365天）", ["500 元/日", "1,000 元/日", "1,000 元/日", "2,000 元/日", "2,000 元/日"]], ["每人年保險費", ["180 元", "360 元", "360 元", "720 元", "720 元"]]], "note": "加值保障一需搭配基本保障方案（一對一、不可交叉投保），且需全數員工均有投保勞工職業災害保險並提供職災編號。"}, "add2": {"label": "加值保障二：雇主意外責任保險升級版（投保基本保障方案二～五可加保）", "limit": "每一個人體傷責任限額 500萬 ／ 每一意外事故體傷責任限額 2,500萬 ／ 保險期間內最高賠償金額 5,000萬", "fee": "350 元", "fee_note": "每人保險費"}, "rules": ["專案投保人數須 5 人以上，採記名方式投保（雇主、老闆或負責人不得列於員工名冊中一同投保）。", "員工首年投保年齡須至未滿 70 足歲，續保至未滿 75 足歲。", "投保方案一須單獨出單，不可與其他方案混合投保。", "投保加值保障一、職業災害所得補償項目需全數員工均有投保勞工職業災害保險，並提供勞工職業災害保險編號（職災編號）；如有其他職災補償項目需求，請洽本公司服務窗口個案報價。", "本專案僅適用被保險人經營業務種類非屬專案除外行業別，且員工工作性質屬職類 1～4 類之客戶；不符合本專案承保對象之客戶可洽本公司人員個案優惠報價。"], "scope_title": "除外行業別（以下行業不適用本版，請參考工廠工程業版或洽個案報價）", "scope": ["土木工程業（職災編號:26）", "庭園景觀工程業（職災編號:27）", "紙漿與紙及紙製品製造業（職災編號:10）", "金屬製品製造業（含鐵工廠機械廠工人）（職災編號:16）", "非金屬礦物製品製造業（職災編號:14）", "木竹製品及家具製造業（職災編號:9）", "機電管道及其他建築設備安裝業（職災編號:29）", "專門營造業（職災編號:28）", "建築工程業（含鷹架工、沖床工及各式工地工人）（職災編號:25）", "基本金屬製造業（職災編號:15）", "石油及天然氣礦業、砂、石及黏土採取業、其他礦業及土石採取業（含砂石車司機與工人）（職災編號:3）", "水上運輸業（職災編號:33）", "養殖業", "森林木材業砍伐業、造林業", "海事工程業", "保全業", "職業運動員", "軍警消（含救難大隊及救生員）", "動物園飼養業", "核能工程相關行業", "陸運業（含營業用貨車司機）（職災編號:32）", "航空運輸業（地勤人員不在此限）", "外牆清洗業", "天然氣供應業（含瓦斯分裝工、油罐車司機及工人）", "道路清潔及工程業", "職業類別五、六類及拒保類人員"], "scope_note": "以上僅為例示，詳細職業分類悉依富邦受僱人職業分類表規定辦理，本公司核保人員保有最後承保與否之權利。", "excess": "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬（方案一不含；方案二～五皆含）"}, "factory": {"name": "工廠工程業", "plans": ["方案A", "方案B", "方案C"], "cat": "承保職業類別：1～5 類（詳細職業分類依富邦受僱人職業分類表規定辦理）", "rows": [["sec", "雇主補償契約責任險（執行職務期間）"], {"label": "死亡及失能補償金", "unit": "萬", "vals": ["100", "200", "300"]}, {"label": "醫療費用補償金", "unit": "萬", "vals": ["2", "3", "3"]}, {"label": "住院日額補償金（最高90天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}, {"label": "重大燒燙傷補償金", "unit": "萬", "vals": ["100", "200", "300"]}, {"label": "加護病房補償金（日額，最高45天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}, {"label": "住院慰問金補償金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "3,000", "5,000"]}, {"label": "燒燙傷病房補償金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}, {"label": "(超額)雇主意外責任險", "unit": "", "vals": ["每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬"], "excess": true}, {"label": "每人每一意外事故門診手術慰問金", "unit": "元/次", "vals": ["2,000", "2,000", "2,000"]}, ["sec", "團體傷害險（非執行職務期間）"], {"label": "身故及失能保險金（失能等級項目數：11級80項）", "unit": "萬", "vals": ["100", "200", "300"]}, {"label": "傷害醫療實支實付型", "unit": "萬", "vals": ["2", "3", "3"]}, {"label": "傷害醫療住院日額型（最高90天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}, {"label": "重大燒燙傷保險金", "unit": "萬", "vals": ["100", "200", "300"]}, {"label": "加護病房保險金（最高45天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}, {"label": "住院慰問保險金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "3,000", "5,000"]}, {"label": "燒燙傷病房保險金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000"]}], "prem": [["每人年繳保費（職業類別 1～3 類）・投保人數 5～49 人", ["1,690", "2,615", "3,760"]], ["每人年繳保費（職業類別 1～3 類）・投保人數 50 人以上", ["1,500", "2,290", "3,270"]], ["每人年繳保費（職業類別 4～5 類）・投保人數 5～49 人", ["3,380", "5,475", "8,040"]], ["每人年繳保費（職業類別 4～5 類）・投保人數 50 人以上", ["3,060", "4,965", "7,280"]]], "add1": {"label": "加值保障一：職業災害所得補償（可理賠小於三天之職災事故）", "rows": [["職災所得補償金（日額型，最高365天）", ["1,000 元/日", "1,000 元/日", "2,000 元/日"]], ["每人年保險費", ["580 元", "580 元", "1,160 元"]]], "note": "加值保障一之方案A搭配基本保障方案A，方案B搭配方案B，依此類推，不可交叉投保；需提供職災編號。"}, "add2": {"label": "加值保障二：雇主意外責任保險升級版", "limit": "每一個人體傷責任限額 500萬 ／ 每一意外事故體傷責任限額 2,500萬 ／ 保險期間內最高賠償金額 5,000萬", "fee": "600 元（方案A、B、C 皆同）", "fee_note": "每人保險費"}, "rules": ["專案投保人數須 5 人以上，採記名方式投保（雇主、老闆或負責人不得列於員工名冊中一同投保）。", "員工首年投保年齡須至未滿 70 足歲，續保至未滿 75 足歲。", "投保加值保障一、職業災害所得補償項目需全數員工均有投保勞工職業災害保險，並提供勞工職業災害保險編號（職災編號）；如有其他職災補償項目需求，請洽本公司服務窗口個案報價。", "本專案僅適用被保險人經營業務種類屬專案適用行業別，且員工工作性質屬職類 1～5 類之客戶，不符合本專案承保對象之客戶可選擇本公司其他適合專案或洽本公司服務人員個案優惠報價。"], "scope_title": "專案適用行業別（含職災編號）", "scope": ["木竹製品及家具製造業（職災編號:9）", "紙漿紙及紙製品製造業（職災編號:10）", "非金屬礦物製品製造業（職災編號:14）", "基本金屬製造業（職災編號:15）", "金屬製品製造業（職災編號:16）", "金屬手工具製造業（職災編號:17）及機械設備製造業（職災編號:19）等各類鋼鐵及機械器具類工廠製造業（含電焊工人）", "汽車及其零件及各類運輸工具製造業（職災編號:20）", "建築工程業（職災編號:25）", "土木工程業（職災編號:26）", "庭園景觀工程業（職災編號:27）", "專門營造業（職災編號:28）", "機電管道及其他建築設備安裝業（職災編號:29）"], "scope_note": "詳細職業分類悉依富邦受僱人職業分類表規定辦理，本公司核保人員保有最後承保與否之權利。", "excess": "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬（各方案皆含）"}, "service": {"name": "醫療金融補教顧問服務業", "plans": ["方案A", "方案B", "方案C", "方案D"], "cat": "承保職業類別：1～2 類", "rows": [["sec", "雇主補償契約責任險（執行職務期間）"], {"label": "死亡及失能補償金", "unit": "萬", "vals": ["100", "200", "300", "500"]}, {"label": "醫療費用補償金", "unit": "萬", "vals": ["5", "6", "8", "10"]}, {"label": "住院日額補償金（最高90天）", "unit": "元/日", "vals": ["2,000", "2,000", "3,000", "3,000"]}, {"label": "重大燒燙傷補償金", "unit": "萬", "vals": ["100", "200", "300", "500"]}, {"label": "加護病房補償金（日額，最高45天）", "unit": "元/日", "vals": ["1,000", "2,000", "3,000", "3,000"]}, {"label": "住院慰問金補償金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "5,000", "8,000", "10,000"]}, {"label": "燒燙傷病房補償金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000", "3,000"]}, {"label": "(超額)雇主意外責任險", "unit": "", "vals": ["每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬", "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬"], "excess": true}, {"label": "每人每一意外事故門診手術慰問金", "unit": "元/次", "vals": ["3,000", "3,000", "3,000", "5,000"]}, ["sec", "團體傷害險（非執行職務期間）"], {"label": "身故及失能保險金（失能等級項目數：11級80項）", "unit": "萬", "vals": ["100", "200", "300", "500"]}, {"label": "傷害醫療實支實付型", "unit": "萬", "vals": ["5", "6", "8", "10"]}, {"label": "傷害醫療住院日額型（最高90天）", "unit": "元/日", "vals": ["2,000", "2,000", "3,000", "3,000"]}, {"label": "重大燒燙傷保險金", "unit": "萬", "vals": ["100", "200", "300", "500"]}, {"label": "加護病房保險金（最高45天）", "unit": "元/日", "vals": ["1,000", "2,000", "3,000", "3,000"]}, {"label": "住院慰問保險金（住院須連續3日（含）以上）", "unit": "元/次", "vals": ["3,000", "5,000", "8,000", "10,000"]}, {"label": "燒燙傷病房保險金（最高14天）", "unit": "元/日", "vals": ["1,000", "1,000", "2,000", "3,000"]}], "prem": [["每人年繳保費（職業類別 1～2 類）・投保人數 5～49 人", ["1,495", "2,195", "3,185", "4,540"]], ["每人年繳保費（職業類別 1～2 類）・投保人數 50 人以上", ["1,310", "1,925", "2,785", "3,975"]]], "add1": {"label": "加值保障一：職業災害所得補償（可理賠小於三天之職災事故）", "rows": [["職災所得補償金（日額型，最高365天）", ["1,000 元/日", "1,000 元/日", "2,000 元/日", "2,000 元/日"]], ["每人年保險費", ["200 元", "200 元", "400 元", "400 元"]]], "note": "加值保障一之方案A搭配基本保障方案A，方案B搭配方案B，依此類推，不可交叉投保；需提供職災編號。"}, "add2": {"label": "加值保障二：雇主意外責任保險升級版", "limit": "每一個人體傷責任限額 500萬 ／ 每一意外事故體傷責任限額 2,500萬 ／ 保險期間內最高賠償金額 5,000萬", "fee": "280 元（方案A～D 皆同）", "fee_note": "每人保險費"}, "rules": ["專案投保人數須 5 人以上，採記名方式投保（雇主、老闆或負責人不得列於員工名冊中一同投保）。", "員工首年投保年齡須至未滿 70 足歲，續保至未滿 75 足歲。", "投保加值保障一、職業災害所得補償項目需全數員工均有投保勞工職業災害保險，並提供勞工職業災害保險編號（職災編號）；如有其他職災補償項目需求，請洽本公司服務窗口個案報價。", "本專案僅適用被保險人經營業務種類屬專案適用行業別，且員工工作性質屬職類 1～2 類之客戶，不符合本專案承保對象之客戶可選擇本公司其他適合專案或洽本公司服務人員個案優惠報價。"], "scope_title": "專案適用行業別（含職災編號）", "scope": ["報關及船務代理業（職災編號:35）", "旅館住宿服務業（不含餐飲業）（職災編號:39）", "影片、文字、錄音等出版服務業（職災編號:40）", "電信業（職災編號:41）", "電腦系統設計及資訊服務業（職災編號:42）", "金融證券保險業（職災編號:43）", "不動產開發仲介服務業（職災編號:44）", "法律、會計、顧問等各類專門服務業（職災編號:45）", "研究發展服務業（職災編號:46）", "旅行及相關代訂服務業（職災編號:47）", "教育服務業（職災編號:50）", "醫療保健服務業（職災編號:51）", "宗教或職業工會組織之文書內勤人員（職災編號:53）"], "scope_note": "限職業類別 1～2 類人員，詳細職業分類悉依富邦受僱人職業分類表規定辦理，本公司核保人員保有最後承保與否之權利。", "excess": "每人體傷責任限額 200萬 ／ 每一意外事故體傷責任限額 1,000萬 ／ 保險期間內最高賠償金額 2,400萬（各方案皆含）"}};
+var HAOF=[["全天候優質保障", "員工執行職務期間發生意外導致傷害、失能、死亡，依雇主補償契約責任保險約定補償，無須論責；非執行職務期間有團體傷害險保障項目齊全，老闆放心、員工感心，共創勞資和諧關係。"], ["完整意外傷害醫療保障", "提供 24 小時完整的傷害醫療，包含實支實付、住院日額、加護病房日額、燒燙傷病房日額及門診手術慰問金等優質保障，且可副本理賠。"], ["職災 1 級失能增額給付", "員工不幸於執行職務期間遭遇意外事故導致 1 級失能時，失能給付比例升級為死亡及失能保額之 110%，減輕員工及家屬負擔，雇主保障更完善。"], ["重大燒燙傷保障", "提供全日重大燒燙傷保險金之保障。"], ["超額雇主意外責任險", "若雇主民事責任超過雇補險保額時，可啟用超額雇主意外責任險，協助後續和解或訴訟應負之賠償。一般行業須投保方案二以上；工廠工程業、醫療金融補教顧問服務業版全計畫皆含。"], ["兼顧風險管理與道義責任", "執行職務期間補償金可作為和解賠償金抵充雇主責任；非執行職務期間保險金可供員工或其家屬作為道義責任賠償。"], ["線上加退保作業", "不論投保任何方案內容，員工異動或變更保障皆可透過富邦線上加退保系統進行作業，方便又快速。"], ["優質加值保障自由配", "職災所得日額補償金及超額雇主意外責任險保額升級可依需求自由選擇投保，保障防護更完善（職災所得日額補償金可理賠小於三天之職災事故）。"]];
+function $(s){return document.querySelector(s)}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function cell(v,cls){ if(v===null||v===undefined) return '<span class="miss">請以DM為準</span>'; return esc(v); }
+
+/* ---------- 試算器 ---------- */
+function fmt(n){return 'NT$ '+Math.round(n).toLocaleString('en-US')}
+function calc(){
+  var w=parseFloat($('#wage').value); var p=parseFloat($('#paid').value)||0;
+  if(!(w>0)){['r-death','r-end','r-dis','r-month'].forEach(function(i){$('#'+i).textContent='—'});$('#gapbox').style.display='none';$('#gapbox2').style.display='none';return}
+  var death=w*45,end=w*40;
+  $('#r-death').textContent=fmt(death);
+  $('#r-end').textContent=fmt(end);
+  $('#r-dis').textContent=Math.round(w*1.5).toLocaleString('en-US')+' ～ '+Math.round(w*60).toLocaleString('en-US')+' 元';
+  $('#r-month').textContent=fmt(w);
+  if(p>0){
+    $('#gapbox').style.display='';$('#gapbox2').style.display='';
+    $('#r-gap').textContent=fmt(Math.max(0,death-p));
+    $('#r-gap2').textContent=fmt(Math.max(0,end-p));
+  }else{$('#gapbox').style.display='none';$('#gapbox2').style.display='none'}
+}
+$('#wage').addEventListener('input',function(){document.querySelectorAll('#wchips .chip').forEach(function(c){c.classList.toggle('on',c.dataset.w===$('#wage').value)});calc()});
+$('#paid').addEventListener('input',calc);
+document.querySelectorAll('#wchips .chip').forEach(function(c){c.onclick=function(){$('#wage').value=c.dataset.w;document.querySelectorAll('#wchips .chip').forEach(function(x){x.classList.toggle('on',x===c)});calc()}});
+document.querySelectorAll('#pchips .chip').forEach(function(c){c.onclick=function(){$('#paid').value=c.dataset.p==='0'?'':c.dataset.p;calc()}});
+calc();
+
+/* ---------- 頭家安康2.0 ---------- */
+function tabs(el,labels,cur,cb,cls){
+  el.innerHTML=labels.map(function(l,i){return '<button type="button" class="tab '+(cls||'')+(i===cur?' on':'')+'" data-i="'+i+'">'+esc(l)+'</button>'}).join('');
+  el.querySelectorAll('.tab').forEach(function(b){b.onclick=function(){cb(+b.dataset.i)}});
+}
+var lifeCur=2;
+function renderLife(i){
+  lifeCur=i; tabs($('#lifeTabs'),LIFE.plans.map(function(p){return '計劃 '+p}),i,renderLife);
+  var h='<table class="tbl">';
+  LIFE.rows.forEach(function(r){
+    if(r[1]===null){h+='<tr class="sec"><td colspan="2">'+esc(r[0])+'</td></tr>';}
+    else{h+='<tr><td>'+esc(r[0])+(r[2]?'<div class="small">'+esc(r[2])+'</div>':'')+'</td><td class="v">'+esc(r[1][i])+'</td></tr>';}
+  });
+  h+='</table><h4 class="sub" style="margin-top:18px">每人年繳保費（依職業等級）</h4><div class="prem">';
+  LIFE.prem.forEach(function(p){
+    var v=p[1][i]; if(v==='—') return; h+='<div class="p"><span>'+esc(p[0])+'</span><b>'+esc(v)+'</b> 元</div>';
+  });
+  h+='</div>';
+  $('#lifeCard').innerHTML=h;
+}
+renderLife(lifeCur);
+/* ---------- 好頭家 ---------- */
+var haoVer='general',haoPlan=0;
+var VKEYS=['general','factory','service'];
+function renderHaoVer(k){
+  haoVer=k; haoPlan=0;
+  tabs($('#haoVer'),VKEYS.map(function(x){return HAO[x].name}),VKEYS.indexOf(k),function(i){renderHaoVer(VKEYS[i])});
+  var v=HAO[k];
+  var h='<p class="small" style="margin:4px 0 10px"><b>'+esc(v.cat)+'</b></p><h4 class="sub" style="margin-top:6px">'+esc(v.scope_title)+'</h4><div class="pillgrid">'+v.scope.map(function(s){return '<span>'+esc(s)+'</span>'}).join('')+'</div><p class="note">'+esc(v.scope_note)+'</p>';
+  $('#haoScope').innerHTML=h;
+  var r='';v.rules.forEach(function(x){r+='<li>'+esc(x)+'</li>'}); $('#haoRules').innerHTML=r;
+  var a='<div class="card" style="padding:18px 20px;margin-bottom:12px"><b class="serif" style="color:var(--teal-dd)">'+esc(v.add1.label)+'</b><div class="scroll s2" style="margin-top:10px"><table class="tbl"><tr><th></th>'+v.plans.map(function(p){return '<th>'+esc(p)+'</th>'}).join('')+'</tr>'+v.add1.rows.map(function(rr){return '<tr><td>'+esc(rr[0])+'</td>'+rr[1].map(function(x){return '<td class="v">'+cell(x)+'</td>'}).join('')+'</tr>'}).join('')+'</table></div><p class="note">'+esc(v.add1.note)+'</p></div>';
+  a+='<div class="card" style="padding:18px 20px"><b class="serif" style="color:var(--teal-dd)">'+esc(v.add2.label)+'</b><p class="small" style="margin-top:6px">（超額）雇主意外責任險保額升級，其餘內容不變。保額變更為：<br>'+esc(v.add2.limit).split(' ／ ').join('<br>')+'<br><b>'+esc(v.add2.fee_note)+'：'+esc(v.add2.fee)+'</b></p></div>';
+  $('#haoAdd').innerHTML=a;
+  renderHaoPlan(0);
+}
+function renderHaoPlan(i){
+  haoPlan=i; var v=HAO[haoVer];
+  tabs($('#haoPlan'),v.plans,i,renderHaoPlan);
+  var h='<table class="tbl">';
+  v.rows.forEach(function(r){
+    if(r.label===undefined){h+='<tr class="sec"><td colspan="2">'+esc(r[1])+'</td></tr>'}
+    else if(r.excess){var x=r.vals[i]; h+='<tr><td>'+esc(r.label)+'</td><td class="v">'+(x==='─'?'─':'<span class="small" style="display:block;text-align:right;line-height:1.7;white-space:normal;min-width:150px">'+esc(x).split(' ／ ').join('<br>')+'</span>')+'</td></tr>'}
+    else h+='<tr><td>'+esc(r.label)+'</td><td class="v">'+cell(r.vals[i])+(r.vals[i]&&r.vals[i]!=='─'&&r.unit?' '+esc(r.unit):'')+'</td></tr>';
+  });
+  h+='</table><h4 class="sub" style="margin-top:18px">每人年繳保費</h4><div class="prem">';
+  v.prem.forEach(function(p){h+='<div class="p"><span>'+esc(p[0])+'</span><b style="font-size:16px">'+(p[1][i]===null?'<span class="miss">請以DM為準</span>':esc(p[1][i])+' 元')+'</b></div>'});
+  h+='</div>';
+  $('#haoCard').innerHTML=h;
+}
+renderHaoVer('general');
+
+</script>
+</body>
+</html>
